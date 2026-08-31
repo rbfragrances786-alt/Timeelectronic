@@ -1,0 +1,16 @@
+{
+  "id": "mob-02",
+  "title": "Samsung Galaxy S24 Ultra 5G (12GB+512GB)",
+  "category": "Mobiles",
+  "brand": "SAMSUNG",
+  "cashPrice": 399999,
+  "originalPrice": 435000,
+  "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=600",
+  "specs": [
+    "12GB LPDDR5X + 512GB UFS 4.0",
+    "Snapdragon 8 Gen 3 for Galaxy",
+    "200MP Quad Camera + Galaxy AI",
+    "Titanium Frame + Built-in S-Pen"
+  ],
+  "warranty": "1-Year Samsung Official Warranty"
+}
