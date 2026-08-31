@@ -1,356 +1,356 @@
 {
   "products": [
     {
-      "id": "ac-01",
-      "title": "Haier 1.5 Ton DC Inverter Split AC (HSU-18HNS/012USDC)",
-      "category": "Air Conditioners",
       "brand": "HAIER",
       "cashPrice": 165000,
-      "originalPrice": 185000,
-      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "1.5 Ton T3 DC Inverter",
         "Self-Cleaning & UV Sterilization",
         "UPS / Solar Enabled",
         "10-Year Compressor Warranty"
       ],
-      "warranty": "10-Year Compressor, 1-Year Parts"
+      "originalPrice": 185000,
+      "title": "Haier 1.5 Ton DC Inverter Split AC (HSU-18HNS/012USDC)",
+      "id": "ac-01",
+      "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600",
+      "warranty": "10-Year Compressor, 1-Year Parts",
+      "category": "Air Conditioners"
     },
     {
-      "id": "ac-02",
-      "title": "PEL 1.5 Ton Apex Inverter AC (Heat & Cool)",
-      "category": "Air Conditioners",
       "brand": "PEL",
       "cashPrice": 148000,
-      "originalPrice": 162000,
-      "image": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Low Voltage Startup (140V)",
         "Gold Fin Anti-Rust Condenser",
         "4D Air Flow Direction",
         "Heat & Cool All-Season"
       ],
-      "warranty": "10-Year Compressor Warranty"
+      "originalPrice": 162000,
+      "title": "PEL 1.5 Ton Apex Inverter AC (Heat & Cool)",
+      "id": "ac-02",
+      "image": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80&w=600",
+      "warranty": "10-Year Compressor Warranty",
+      "category": "Air Conditioners"
     },
     {
-      "id": "ac-03",
-      "title": "Dawlance 1.5 Ton Chrome Inverter AC",
-      "category": "Air Conditioners",
       "brand": "DAWLANCE",
       "cashPrice": 154000,
-      "originalPrice": 170000,
-      "image": "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Dual Inverter Generator Mode",
         "Power Cooling 10M Throw",
         "Self Cleaning Feature",
         "Corrosion Resistance Coat"
       ],
-      "warranty": "12-Year Compressor Warranty"
+      "originalPrice": 170000,
+      "title": "Dawlance 1.5 Ton Chrome Inverter AC",
+      "id": "ac-03",
+      "image": "https://images.unsplash.com/photo-1590486803833-1c5dc8ddd4c8?auto=format&fit=crop&q=80&w=600",
+      "warranty": "12-Year Compressor Warranty",
+      "category": "Air Conditioners"
     },
     {
-      "id": "lap-01",
-      "title": "HP Victus 15 Gaming Laptop (13th Gen Core i5)",
-      "category": "Laptops",
       "brand": "HP",
       "cashPrice": 245000,
-      "originalPrice": 270000,
-      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Core i5 13th Gen",
         "16GB DDR5 RAM",
         "512GB NVMe SSD",
         "RTX 3050 6GB GDDR6"
       ],
-      "warranty": "1-Year Official HP Warranty"
+      "originalPrice": 270000,
+      "title": "HP Victus 15 Gaming Laptop (13th Gen Core i5)",
+      "id": "lap-01",
+      "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&q=80&w=600",
+      "warranty": "1-Year Official HP Warranty",
+      "category": "Laptops"
     },
     {
-      "id": "lap-02",
-      "title": "HP 15s FHD Core i5 12th Gen (8GB / 512GB SSD)",
-      "category": "Laptops",
       "brand": "HP",
       "cashPrice": 148000,
-      "originalPrice": 160000,
-      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Core i5 1235U 10-Cores",
         "8GB DDR4 RAM",
         "512GB Fast NVMe SSD",
         "15.6 Micro-Edge Anti-Glare"
       ],
-      "warranty": "1-Year Official Warranty"
+      "originalPrice": 160000,
+      "title": "HP 15s FHD Core i5 12th Gen (8GB / 512GB SSD)",
+      "id": "lap-02",
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=600",
+      "warranty": "1-Year Official Warranty",
+      "category": "Laptops"
     },
     {
-      "id": "mob-01",
-      "title": "Infinix Note 40 Pro (12GB+256GB)",
-      "category": "Mobiles",
       "brand": "INFINIX",
       "cashPrice": 69999,
-      "originalPrice": 77999,
-      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "12GB RAM + 256GB Storage",
         "108MP OIS Camera",
         "70W FastCharge + 20W Wireless",
         "120Hz 3D-Curved AMOLED"
       ],
-      "warranty": "1-Year PTA Approved Warranty"
+      "originalPrice": 77999,
+      "title": "Infinix Note 40 Pro (12GB+256GB)",
+      "id": "mob-01",
+      "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=600",
+      "warranty": "1-Year PTA Approved Warranty",
+      "category": "Mobiles"
     },
     {
-      "id": "mob-02",
-      "title": "Samsung Galaxy S24 Ultra 5G (12GB+512GB)",
-      "category": "Mobiles",
       "brand": "SAMSUNG",
       "cashPrice": 399999,
-      "originalPrice": 435000,
-      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "12GB LPDDR5X + 512GB UFS 4.0",
         "Snapdragon 8 Gen 3 for Galaxy",
         "200MP Quad Camera + Galaxy AI",
         "Titanium Frame + Built-in S-Pen"
       ],
-      "warranty": "1-Year Samsung Official Warranty"
+      "originalPrice": 435000,
+      "title": "Samsung Galaxy S24 Ultra 5G (12GB+512GB)",
+      "id": "mob-02",
+      "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?auto=format&fit=crop&q=80&w=600",
+      "warranty": "1-Year Samsung Official Warranty",
+      "category": "Mobiles"
     },
     {
-      "id": "mob-03",
-      "title": "Samsung Galaxy A55 5G (8GB+256GB)",
-      "category": "Mobiles",
       "brand": "SAMSUNG",
       "cashPrice": 139999,
-      "originalPrice": 155000,
-      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "8GB RAM / 256GB ROM",
         "Exynos 1480 Chipset",
         "50MP OIS Triple Camera",
         "IP67 Dust/Water Resist"
       ],
-      "warranty": "1-Year Samsung Official Warranty"
+      "originalPrice": 155000,
+      "title": "Samsung Galaxy A55 5G (8GB+256GB)",
+      "id": "mob-03",
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=600",
+      "warranty": "1-Year Samsung Official Warranty",
+      "category": "Mobiles"
     },
     {
-      "id": "mob-04",
+      "brand": "INFINIX",
+      "cashPrice": 89999,
+      "specs": [
+        "8GB RAM + 256GB Storage",
+        "108MP OIS Rear Camera",
+        "45W Ultra FastCharge",
+        "120Hz Curved AMOLED Display"
+      ],
+      "originalPrice": 97999,
       "title": "Infinix Note 40 (Sunset Orange, 8GB+256GB)",
-      "category": "Mobiles",
-      "brand": "INFINIX",
-      "cashPrice": 89999,
-      "originalPrice": 97999,
+      "id": "mob-04",
       "image": "images/mob-04.jpg",
-      "specs": [
-        "8GB RAM + 256GB Storage",
-        "108MP OIS Rear Camera",
-        "45W Ultra FastCharge",
-        "120Hz Curved AMOLED Display"
-      ],
-      "warranty": "1-Year PTA Approved Warranty"
+      "warranty": "1-Year PTA Approved Warranty",
+      "category": "Mobiles"
     },
     {
-      "id": "mob-05",
-      "title": "Infinix Note 40 (Glacier White, 8GB+256GB)",
-      "category": "Mobiles",
       "brand": "INFINIX",
       "cashPrice": 89999,
-      "originalPrice": 97999,
-      "image": "images/mob-05.jpg",
       "specs": [
         "8GB RAM + 256GB Storage",
         "108MP OIS Rear Camera",
         "45W Ultra FastCharge",
         "120Hz Curved AMOLED Display"
       ],
-      "warranty": "1-Year PTA Approved Warranty"
+      "originalPrice": 97999,
+      "title": "Infinix Note 40 (Glacier White, 8GB+256GB)",
+      "id": "mob-05",
+      "image": "images/mob-05.jpg",
+      "warranty": "1-Year PTA Approved Warranty",
+      "category": "Mobiles"
     },
     {
-      "id": "mob-06",
-      "title": "Infinix Smart 8 (Horizon Blue, 4GB+128GB)",
-      "category": "Mobiles",
       "brand": "INFINIX",
-      "cashPrice": 28999,
-      "originalPrice": 32999,
-      "image": "images/mob-06.jpg",
+      "cashPrice": 69,
       "specs": [
         "4GB RAM + 128GB Storage",
         "Dual Rear Camera Setup",
         "5000mAh Long-Lasting Battery",
         "Ring-Style Camera Module Design"
       ],
-      "warranty": "1-Year PTA Approved Warranty"
+      "originalPrice": 32999,
+      "title": "Laund la la Mera ",
+      "id": "mob-06",
+      "image": "images/gemini_generated_image_qe14lhqe14lhqe14.jpg",
+      "warranty": "1-Year PTA Approved Warranty",
+      "category": "Mobiles"
     },
     {
-      "id": "mob-07",
-      "title": "Infinix Smart 8 Plus (Emerald Green, 4GB+128GB)",
-      "category": "Mobiles",
       "brand": "INFINIX",
       "cashPrice": 32999,
-      "originalPrice": 36999,
-      "image": "images/mob-07.jpg",
       "specs": [
         "4GB RAM + 128GB Storage",
         "13MP AI Dual Camera",
         "6000mAh Massive Battery",
         "Textured Anti-Fingerprint Back"
       ],
-      "warranty": "1-Year PTA Approved Warranty"
+      "originalPrice": 36999,
+      "title": "Infinix Smart 8 Plus (Emerald Green, 4GB+128GB)",
+      "id": "mob-07",
+      "image": "images/mob-07.jpg",
+      "warranty": "1-Year PTA Approved Warranty",
+      "category": "Mobiles"
     },
     {
-      "id": "fr-01",
-      "title": "Dawlance Avante+ Double Door Refrigerator (18 Cu.Ft)",
-      "category": "Refrigerators",
       "brand": "DAWLANCE",
       "cashPrice": 136000,
-      "originalPrice": 152000,
-      "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Inverter 55% Energy Saving",
         "Vitamin Fresh 30-Day Fresh",
         "NatureLock Crisper",
         "Tempered Glass Shelves"
       ],
-      "warranty": "12-Year Compressor Warranty"
+      "originalPrice": 152000,
+      "title": "Dawlance Avante+ Double Door Refrigerator (18 Cu.Ft)",
+      "id": "fr-01",
+      "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&q=80&w=600",
+      "warranty": "12-Year Compressor Warranty",
+      "category": "Refrigerators"
     },
     {
-      "id": "fr-02",
-      "title": "Haier Glass Door Inverter Refrigerator (14 Cu.Ft)",
-      "category": "Refrigerators",
       "brand": "HAIER",
       "cashPrice": 118000,
-      "originalPrice": 130000,
-      "image": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "1 Hour Icing Technology",
         "2nd Gen FD Inverter",
         "Digital Touch Control",
         "Anti-Bacterial Gasket"
       ],
-      "warranty": "10-Year Compressor Warranty"
+      "originalPrice": 130000,
+      "title": "Haier Glass Door Inverter Refrigerator (14 Cu.Ft)",
+      "id": "fr-02",
+      "image": "https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?auto=format&fit=crop&q=80&w=600",
+      "warranty": "10-Year Compressor Warranty",
+      "category": "Refrigerators"
     },
     {
-      "id": "fr-03",
-      "title": "PEL Desire Glass Door Refrigerator (16 Cu.Ft)",
-      "category": "Refrigerators",
       "brand": "PEL",
       "cashPrice": 98000,
-      "originalPrice": 109000,
-      "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Instant Ice Zone",
         "High Copper Condenser",
         "Low Voltage Stabilizer-Free",
         "10-Hour Cool Retention"
       ],
-      "warranty": "10-Year Compressor Warranty"
+      "originalPrice": 109000,
+      "title": "PEL Desire Glass Door Refrigerator (16 Cu.Ft)",
+      "id": "fr-03",
+      "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?auto=format&fit=crop&q=80&w=600",
+      "warranty": "10-Year Compressor Warranty",
+      "category": "Refrigerators"
     },
     {
-      "id": "wm-01",
-      "title": "Dawlance 11kg Fully Automatic Top Load Washer",
-      "category": "Washing Machines",
       "brand": "DAWLANCE",
       "cashPrice": 77000,
-      "originalPrice": 84000,
-      "image": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "11 KG Large Tub Capacity",
         "Pro Fabric Waterfall Wash",
         "Soft Close Glass Lid",
         "Auto Restart on Power Cut"
       ],
-      "warranty": "10-Year Motor Warranty"
+      "originalPrice": 84000,
+      "title": "Dawlance 11kg Fully Automatic Top Load Washer",
+      "id": "wm-01",
+      "image": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?auto=format&fit=crop&q=80&w=600",
+      "warranty": "10-Year Motor Warranty",
+      "category": "Washing Machines"
     },
     {
-      "id": "wm-02",
-      "title": "Haier 9kg Front Load Inverter Washing Machine",
-      "category": "Washing Machines",
       "brand": "HAIER",
       "cashPrice": 125000,
-      "originalPrice": 140000,
-      "image": "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Direct Motion Quiet Motor",
         "99.9% Steam Sterilization",
         "Pillow Drum Fabric Guard",
         "1400 RPM Spin"
       ],
-      "warranty": "10-Year Motor Warranty"
+      "originalPrice": 140000,
+      "title": "Haier 9kg Front Load Inverter Washing Machine",
+      "id": "wm-02",
+      "image": "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&q=80&w=600",
+      "warranty": "10-Year Motor Warranty",
+      "category": "Washing Machines"
     },
     {
-      "id": "df-01",
-      "title": "PEL Arctic Double Door Deep Freezer (14 Cu.Ft)",
-      "category": "Deep Freezers",
       "brand": "PEL",
       "cashPrice": 79000,
-      "originalPrice": 88000,
-      "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Dual Compartment Freezing",
         "100% Copper Winding Tubing",
         "Thick Foaming Thermal Barrier",
         "14-Hour Power Cut Backup"
       ],
-      "warranty": "10-Year Compressor Warranty"
+      "originalPrice": 88000,
+      "title": "PEL Arctic Double Door Deep Freezer (14 Cu.Ft)",
+      "id": "df-01",
+      "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?auto=format&fit=crop&q=80&w=600",
+      "warranty": "10-Year Compressor Warranty",
+      "category": "Deep Freezers"
     },
     {
-      "id": "tv-01",
-      "title": "TCL 55 Inch 4K UHD Smart Google TV",
-      "category": "LED / Smart TVs",
       "brand": "TCL",
       "cashPrice": 109000,
-      "originalPrice": 118000,
-      "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "55-Inch 4K UHD 3840x2160",
         "Dolby Vision & Atmos",
         "Google TV with Handsfree Voice",
         "MEMC 120Hz Accelerator"
       ],
-      "warranty": "2-Year TCL Panel Warranty"
+      "originalPrice": 118000,
+      "title": "TCL 55 Inch 4K UHD Smart Google TV",
+      "id": "tv-01",
+      "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=600",
+      "warranty": "2-Year TCL Panel Warranty",
+      "category": "LED / Smart TVs"
     },
     {
-      "id": "tv-02",
-      "title": "Samsung 65 Inch Crystal 4K UHD Smart TV",
-      "category": "LED / Smart TVs",
       "brand": "SAMSUNG",
       "cashPrice": 225000,
-      "originalPrice": 248000,
-      "image": "https://images.unsplash.com/photo-1461151304267-38535e780c79?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Crystal Processor 4K",
         "PurColor & HDR",
         "Tizen OS SmartThings",
         "SolarCell Remote"
       ],
-      "warranty": "2-Year Samsung Panel Warranty"
+      "originalPrice": 248000,
+      "title": "Samsung 65 Inch Crystal 4K UHD Smart TV",
+      "id": "tv-02",
+      "image": "https://images.unsplash.com/photo-1461151304267-38535e780c79?auto=format&fit=crop&q=80&w=600",
+      "warranty": "2-Year Samsung Panel Warranty",
+      "category": "LED / Smart TVs"
     },
     {
-      "id": "rc-01",
-      "title": "Orient Super Cool Room Air Cooler (20L Honeycomb)",
-      "category": "Room Coolers",
       "brand": "ORIENT",
       "cashPrice": 34500,
-      "originalPrice": 38000,
-      "image": "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "Dense Honeycomb Pads",
         "Powerful 4-Way Swing",
         "Ice Chamber for Extra Chill",
         "Low Electricity Consumption"
       ],
-      "warranty": "1-Year Motor Warranty"
+      "originalPrice": 38000,
+      "title": "Orient Super Cool Room Air Cooler (20L Honeycomb)",
+      "id": "rc-01",
+      "image": "https://images.unsplash.com/photo-1527011046414-4781f1f94f8c?auto=format&fit=crop&q=80&w=600",
+      "warranty": "1-Year Motor Warranty",
+      "category": "Room Coolers"
     },
     {
-      "id": "ka-01",
-      "title": "Dawlance 30L Microwave Oven & Grill (DW-395G)",
-      "category": "Kitchen Appliances",
       "brand": "DAWLANCE",
       "cashPrice": 38500,
-      "originalPrice": 42000,
-      "image": "https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&q=80&w=600",
       "specs": [
         "30L Capacity",
         "Built-in Pakistani Recipe Menu",
         "Quartz Grill Element",
         "Child Safety Lock"
       ],
-      "warranty": "2-Year Magnetron Warranty"
+      "originalPrice": 42000,
+      "title": "Dawlance 30L Microwave Oven & Grill (DW-395G)",
+      "id": "ka-01",
+      "image": "https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&q=80&w=600",
+      "warranty": "2-Year Magnetron Warranty",
+      "category": "Kitchen Appliances"
     }
   ]
 }
