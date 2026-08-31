@@ -1,0 +1,16 @@
+{
+  "id": "wm-02",
+  "title": "Haier 9kg Front Load Inverter Washing Machine",
+  "category": "Washing Machines",
+  "brand": "HAIER",
+  "cashPrice": 125000,
+  "originalPrice": 140000,
+  "image": "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&q=80&w=600",
+  "specs": [
+    "Direct Motion Quiet Motor",
+    "99.9% Steam Sterilization",
+    "Pillow Drum Fabric Guard",
+    "1400 RPM Spin"
+  ],
+  "warranty": "10-Year Motor Warranty"
+}
