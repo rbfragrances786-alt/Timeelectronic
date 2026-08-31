@@ -1,0 +1,16 @@
+{
+  "id": "ac-01",
+  "title": "Haier 1.5 Ton DC Inverter Split AC (HSU-18HNS/012USDC)",
+  "category": "Air Conditioners",
+  "brand": "HAIER",
+  "cashPrice": 165000,
+  "originalPrice": 185000,
+  "image": "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&q=80&w=600",
+  "specs": [
+    "1.5 Ton T3 DC Inverter",
+    "Self-Cleaning & UV Sterilization",
+    "UPS / Solar Enabled",
+    "10-Year Compressor Warranty"
+  ],
+  "warranty": "10-Year Compressor, 1-Year Parts"
+}
