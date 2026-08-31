@@ -1374,7 +1374,8 @@ function showToast(message, icon = "✓") {
 async function loadProductsAndInit() {
   try {
     const res = await fetch("data/products.json");
-    products = await res.json();
+    const data = await res.json();
+    products = data.products || [];
   } catch (err) {
     console.error("Could not load product data:", err);
     products = [];
