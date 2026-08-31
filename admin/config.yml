@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "images"
+
+publish_mode: simple
+
+collections:
+  - name: "products"
+    label: "Products"
+    label_singular: "Product"
+    files:
+      - name: "productList"
+        label: "All Products"
+        file: "data/products.json"
+        description: "Add, edit, delete products, and set sale prices / discounts here."
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.title}} — Rs {{fields.cashPrice}}"
+            fields:
+              - { label: "Product ID (leave unique, no spaces)", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - "Air Conditioners"
+                  - "LED / Smart TVs"
+                  - "Refrigerators"
+                  - "Washing Machines"
+                  - "Deep Freezers"
+                  - "Mobiles"
+                  - "Laptops"
+                  - "Room Coolers"
+                  - "Kitchen Appliances"
+              - label: "Brand"
+                name: "brand"
+                widget: "select"
+                options:
+                  - "HAIER"
+                  - "PEL"
+                  - "DAWLANCE"
+                  - "HP"
+                  - "INFINIX"
+                  - "SAMSUNG"
+                  - "TCL"
+                  - "ORIENT"
+                allow_custom: true
+              - label: "Cash Price (Rs) — current selling price / sale price"
+                name: "cashPrice"
+                widget: "number"
+                value_type: "int"
+              - label: "Original Price (Rs) — shown crossed-out, leave same as Cash Price for no discount"
+                name: "originalPrice"
+                widget: "number"
+                value_type: "int"
+              - label: "Product Image"
+                name: "image"
+                widget: "image"
+                allow_multiple: false
+              - label: "Specs / Features (one per line)"
+                name: "specs"
+                widget: "list"
+                field: { label: "Spec", name: "spec", widget: "string" }
+              - label: "Warranty Text"
+                name: "warranty"
+                widget: "string"
+                required: false
