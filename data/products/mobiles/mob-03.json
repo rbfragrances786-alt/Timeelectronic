@@ -1,0 +1,16 @@
+{
+  "id": "mob-03",
+  "title": "Samsung Galaxy A55 5G (8GB+256GB)",
+  "category": "Mobiles",
+  "brand": "SAMSUNG",
+  "cashPrice": 139999,
+  "originalPrice": 155000,
+  "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&q=80&w=600",
+  "specs": [
+    "8GB RAM / 256GB ROM",
+    "Exynos 1480 Chipset",
+    "50MP OIS Triple Camera",
+    "IP67 Dust/Water Resist"
+  ],
+  "warranty": "1-Year Samsung Official Warranty"
+}
