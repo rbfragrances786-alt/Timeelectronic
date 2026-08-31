@@ -1,0 +1,16 @@
+{
+  "id": "ac-02",
+  "title": "PEL 1.5 Ton Apex Inverter AC (Heat & Cool)",
+  "category": "Air Conditioners",
+  "brand": "PEL",
+  "cashPrice": 148000,
+  "originalPrice": 162000,
+  "image": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80&w=600",
+  "specs": [
+    "Low Voltage Startup (140V)",
+    "Gold Fin Anti-Rust Condenser",
+    "4D Air Flow Direction",
+    "Heat & Cool All-Season"
+  ],
+  "warranty": "10-Year Compressor Warranty"
+}
