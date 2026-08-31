@@ -1,0 +1,16 @@
+{
+  "id": "mob-05",
+  "title": "Infinix Note 40 (Glacier White, 8GB+256GB)",
+  "category": "Mobiles",
+  "brand": "INFINIX",
+  "cashPrice": 89999,
+  "originalPrice": 97999,
+  "image": "images/mob-05.jpg",
+  "specs": [
+    "8GB RAM + 256GB Storage",
+    "108MP OIS Rear Camera",
+    "45W Ultra FastCharge",
+    "120Hz Curved AMOLED Display"
+  ],
+  "warranty": "1-Year PTA Approved Warranty"
+}
