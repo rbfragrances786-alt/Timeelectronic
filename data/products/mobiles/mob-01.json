@@ -1,0 +1,16 @@
+{
+  "id": "mob-01",
+  "title": "Infinix Note 40 Pro (12GB+256GB)",
+  "category": "Mobiles",
+  "brand": "INFINIX",
+  "cashPrice": 69999,
+  "originalPrice": 77999,
+  "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&q=80&w=600",
+  "specs": [
+    "12GB RAM + 256GB Storage",
+    "108MP OIS Camera",
+    "70W FastCharge + 20W Wireless",
+    "120Hz 3D-Curved AMOLED"
+  ],
+  "warranty": "1-Year PTA Approved Warranty"
+}
