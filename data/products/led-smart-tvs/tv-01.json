@@ -1,0 +1,16 @@
+{
+  "id": "tv-01",
+  "title": "TCL 55 Inch 4K UHD Smart Google TV",
+  "category": "LED / Smart TVs",
+  "brand": "TCL",
+  "cashPrice": 109000,
+  "originalPrice": 118000,
+  "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?auto=format&fit=crop&q=80&w=600",
+  "specs": [
+    "55-Inch 4K UHD 3840x2160",
+    "Dolby Vision & Atmos",
+    "Google TV with Handsfree Voice",
+    "MEMC 120Hz Accelerator"
+  ],
+  "warranty": "2-Year TCL Panel Warranty"
+}
