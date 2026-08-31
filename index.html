@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Time Electronic — Har Cheez Ka Waqt Hai | Easy Monthly Installments</title>
+<meta name="description" content="Shop ACs, Smart TVs, Refrigerators, Mobiles, Laptops and Home Appliances in Karachi on easy monthly installments with 0% markup and free delivery.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:ital,wght@0,500;0,600;0,700;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --navy: #1A2B48;
+    --navy-deep: #0E1C31;
+    --orange: #F27D26;
+    --orange-deep: #D96816;
+    --cream: #F9F7F2;
+    --panel: #FFFFFF;
+    --ink: #131B26;
+    --ink-soft: #4B5A6B;
+    --line: #E2E8F0;
+    --tint: #EAF0F6;
+    --green: #1E8E5A;
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, .display {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.01em;
+    color: var(--navy-deep);
+  }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  a { text-decoration: none; color: inherit; }
+  img { max-width: 100%; display: block; }
+  button { font-family: inherit; cursor: pointer; border: none; outline: none; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+
+  /* Utilities */
+  .hide-scrollbar::-webkit-scrollbar { display: none; }
+  .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  /* ---------- TOPBAR ---------- */
+  .topbar { background: var(--navy-deep); color: #CBD8E5; font-size: 13px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .topbar .wrap { display: flex; justify-content: space-between; align-items: center; padding: 8px 20px; gap: 16px; flex-wrap: wrap; }
+  .topbar .left, .topbar .right { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  .topbar a { opacity: 0.9; transition: 0.2s; display: flex; align-items: center; gap: 6px; }
+  .topbar a:hover { opacity: 1; color: #fff; }
+  .marquee-badge { background: var(--orange); color: #fff; font-weight: 700; padding: 3px 10px; border-radius: 20px; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+
+  /* ---------- HEADER ---------- */
+  header.site { background: var(--panel); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 40; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+  .header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 20px; }
+  .logo { display: flex; align-items: center; gap: 12px; flex-shrink: 0; text-align: left; }
+  .logo-mark { width: 42px; height: 42px; border-radius: 12px; background: var(--navy); position: relative; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(26,43,72,0.2); }
+  .logo-mark::before { content: ''; position: absolute; width: 14px; height: 2px; background: var(--orange); top: 20px; left: 20px; transform-origin: left center; transform: rotate(-90deg); border-radius: 2px; }
+  .logo-mark::after { content: ''; position: absolute; width: 10px; height: 2px; background: #fff; top: 20px; left: 20px; transform-origin: left center; transform: rotate(45deg); border-radius: 2px; }
+  .logo-text { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 21px; line-height: 1; color: var(--navy); font-style: italic; }
+  .logo-text span { color: var(--orange); }
+  .logo-sub { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: var(--ink-soft); margin-top: 3px; font-style: normal; text-transform: uppercase; }
+
+  .search-bar { flex: 1; display: flex; align-items: center; background: var(--tint); border-radius: 30px; padding: 0 6px 0 16px; max-width: 520px; position: relative; border: 1px solid transparent; transition: 0.2s; }
+  .search-bar:focus-within { background: #fff; border-color: var(--orange); box-shadow: 0 0 0 3px rgba(242,125,38,0.15); }
+  .search-bar input { flex: 1; border: none; background: transparent; padding: 10px 0; font-size: 14px; outline: none; color: var(--ink); }
+  .search-bar svg { width: 18px; height: 18px; stroke: var(--ink-soft); fill: none; margin-right: 8px; }
+  .search-bar .clear-search { display: none; background: transparent; color: #999; padding: 4px; font-size: 16px; }
+
+  .header-icons { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+  .icon-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; font-weight: 600; color: var(--ink-soft); position: relative; transition: 0.2s; background: none; }
+  .icon-btn:hover { color: var(--navy); }
+  .icon-btn .icon-box { width: 34px; height: 34px; border-radius: 50%; background: var(--tint); display: flex; align-items: center; justify-content: center; position: relative; }
+  .icon-btn svg { width: 18px; height: 18px; stroke: var(--navy); fill: none; stroke-width: 1.8; }
+  .badge-count { position: absolute; top: -4px; right: -6px; background: var(--orange); color: #fff; font-size: 10px; font-weight: 700; border-radius: 50%; width: 17px; height: 17px; display: flex; align-items: center; justify-content: center; border: 2px solid #fff; }
+
+  .cart-btn-pill { background: var(--navy); color: #fff; padding: 8px 16px; border-radius: 12px; display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 700; transition: 0.2s; }
+  .cart-btn-pill:hover { background: var(--navy-deep); }
+  .cart-btn-pill svg { width: 18px; height: 18px; stroke: #fff; fill: none; }
+
+  /* Navigation Bar */
+  nav.mainnav { border-top: 1px solid var(--line); background: var(--panel); }
+  nav.mainnav .wrap { display: flex; gap: 10px; padding: 8px 20px; overflow-x: auto; align-items: center; }
+  .nav-btn { font-size: 13px; font-weight: 600; color: var(--ink-soft); white-space: nowrap; padding: 6px 12px; border-radius: 8px; transition: 0.2s; background: transparent; }
+  .nav-btn:hover { color: var(--navy); background: var(--tint); }
+  .nav-btn.active { background: var(--orange); color: #fff; font-weight: 700; }
+  .nav-btn.all-btn.active { background: var(--navy); color: #fff; }
+  .nav-btn.hot-deals { margin-left: auto; background: linear-gradient(135deg, var(--orange), var(--orange-deep)); color: #fff; font-weight: 700; border-radius: 20px; padding: 6px 14px; }
+
+  /* ---------- HERO ---------- */
+  .hero { background: linear-gradient(135deg, var(--navy) 0%, #13233B 50%, var(--navy-deep) 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; padding: 56px 20px; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(242,125,38,0.15); border: 1px solid rgba(242,125,38,0.4); color: var(--orange); font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
+  .hero h1 { font-size: 42px; line-height: 1.15; margin-bottom: 18px; color: #fff; }
+  .hero h1 em { font-style: italic; color: var(--orange); }
+  .hero p { color: #C7D3E0; font-size: 15px; max-width: 480px; margin-bottom: 26px; line-height: 1.6; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary { background: var(--orange); color: #fff; padding: 13px 26px; border-radius: 12px; font-weight: 700; font-size: 14px; transition: 0.2s; box-shadow: 0 4px 14px rgba(242,125,38,0.3); }
+  .btn-primary:hover { background: var(--orange-deep); }
+  .btn-ghost { background: rgba(255,255,255,0.08); color: #fff; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.25); transition: 0.2s; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+
+  .hero-trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
+  .hero-trust div { font-size: 11px; color: #9FB1C4; }
+  .hero-trust strong { display: block; color: #fff; font-size: 18px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+
+  /* Clock Dial Visual */
+  .clock-visual { position: relative; width: 280px; height: 280px; margin: 0 auto; }
+  .dial { width: 100%; height: 100%; border-radius: 50%; background: radial-gradient(circle at 32% 28%, #1E3E64, #0A1626 75%); border: 2px solid rgba(255,255,255,0.12); position: relative; box-shadow: 0 25px 50px rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; }
+  .dial::before { content: ''; position: absolute; inset: 12px; border-radius: 50%; border: 1px dashed rgba(255,255,255,0.2); }
+  .dial-center { position: relative; z-index: 5; text-align: center; background: rgba(14,28,49,0.88); backdrop-filter: blur(8px); padding: 14px 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); }
+  .dial-center .amt { font-family: 'JetBrains Mono', monospace; font-size: 22px; font-weight: 700; color: #fff; }
+  .dial-center .lbl { font-size: 10px; color: #9FB1C4; letter-spacing: 0.08em; margin-top: 3px; font-weight: 600; text-transform: uppercase; }
+  .hand { position: absolute; bottom: 50%; left: 50%; width: 3px; background: var(--orange); transform-origin: bottom center; border-radius: 2px; }
+  .hand.h1 { height: 65px; transform: translateX(-50%) rotate(40deg); }
+  .hand.h2 { height: 90px; width: 2px; background: #fff; transform: translateX(-50%) rotate(155deg); opacity: 0.8; }
+
+  /* ---------- CATEGORY STRIP ---------- */
+  .cat-strip { padding: 24px 0; background: var(--panel); border-bottom: 1px solid var(--line); }
+  .cat-strip .wrap { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 4px; }
+  .cat-item { flex-shrink: 0; min-width: 86px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; background: none; cursor: pointer; }
+  .cat-icon { width: 58px; height: 58px; border-radius: 50%; background: var(--cream); border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; transition: 0.2s; position: relative; }
+  .cat-item:hover .cat-icon, .cat-item.active .cat-icon { background: var(--orange); border-color: var(--orange); transform: translateY(-2px); box-shadow: 0 6px 14px rgba(242,125,38,0.25); }
+  .cat-icon svg { width: 26px; height: 26px; stroke: var(--navy); fill: none; stroke-width: 1.6; transition: 0.2s; }
+  .cat-item:hover .cat-icon svg, .cat-item.active .cat-icon svg { stroke: #fff; }
+  .cat-item span { font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+  .cat-item.active span { color: var(--orange); font-weight: 700; }
+  .cat-count { position: absolute; top: -2px; right: -2px; background: var(--navy); color: #fff; font-size: 9px; font-weight: 700; padding: 1px 5px; border-radius: 10px; }
+
+  /* ---------- INTERACTIVE FILTER ENGINE BAR ---------- */
+  .filter-engine-bar { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; margin: 32px 0 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .filter-title h2 { font-size: 22px; font-weight: 700; }
+  .filter-title span { font-size: 12px; font-weight: 600; color: var(--ink-soft); margin-left: 6px; background: var(--tint); padding: 2px 8px; border-radius: 12px; }
+
+  .calculator-controls { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .tenure-chips { display: flex; background: var(--cream); padding: 4px; border-radius: 10px; border: 1px solid var(--line); gap: 4px; }
+  .tenure-chip { padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 700; color: var(--ink-soft); background: transparent; transition: 0.2s; }
+  .tenure-chip:hover { color: var(--navy); }
+  .tenure-chip.active { background: var(--navy); color: #fff; box-shadow: 0 2px 6px rgba(26,43,72,0.2); }
+  .reset-btn { font-size: 12px; font-weight: 700; color: var(--orange); border: 1px solid var(--orange); padding: 7px 14px; border-radius: 8px; background: transparent; display: inline-flex; align-items: center; gap: 6px; transition: 0.2s; }
+  .reset-btn:hover { background: rgba(242,125,38,0.1); }
+
+  /* ---------- BRAND GROUPED WIREFRAME SECTION ---------- */
+  .brand-group-sec { margin-bottom: 40px; }
+  .brand-group-header { background: linear-gradient(90deg, var(--navy), #243B63); color: #fff; border-radius: var(--radius); padding: 14px 20px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(255,255,255,0.1); }
+  .brand-group-title { display: flex; align-items: center; gap: 12px; }
+  .brand-group-badge { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--orange); font-size: 16px; }
+  .brand-group-title h3 { font-size: 20px; font-weight: 700; color: #fff; text-transform: uppercase; font-style: italic; }
+  .brand-group-subtitle { font-size: 12px; color: #CBD8E5; }
+
+  .horizontal-products-list { display: flex; flex-direction: column; gap: 18px; }
+
+  /* Horizontal Product Card Wireframe */
+  .h-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); display: flex; flex-direction: row; overflow: hidden; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.03); will-change: transform; }
+  .h-card:hover { border-color: rgba(242,125,38,0.7); box-shadow: 0 16px 32px rgba(26,43,72,0.12); transform: translateY(-5px); }
+
+  /* Left Side: Info, Specs, Pricing */
+  .h-card-left { flex: 1; padding: 22px 24px; display: flex; flex-direction: column; justify-content: space-between; }
+  .h-card-meta { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .brand-tag { background: var(--navy); color: #fff; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 6px; }
+  .discount-pill { background: rgba(242,125,38,0.15); color: var(--orange); border: 1px solid rgba(242,125,38,0.3); font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 4px; }
+  .warranty-txt { font-size: 11px; color: var(--ink-soft); margin-left: auto; }
+
+  .h-card-title { font-size: 17px; font-weight: 700; color: var(--navy-deep); line-height: 1.35; margin-bottom: 12px; }
+  .h-card-specs { display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px 16px; background: rgba(249,247,242,0.8); border: 1px solid var(--line); padding: 10px 14px; border-radius: 10px; margin-bottom: 16px; list-style: none; }
+  .h-card-specs li { font-size: 12px; color: var(--ink-soft); display: flex; align-items: center; gap: 6px; }
+  .h-card-specs li::before { content: ''; width: 5px; height: 5px; background: var(--orange); border-radius: 50%; flex-shrink: 0; }
+
+  .h-card-pricing { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; padding-top: 12px; border-top: 1px solid var(--line); flex-wrap: wrap; }
+  .cash-price-box .lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; color: var(--ink-soft); }
+  .cash-price-box .val { font-family: 'JetBrains Mono', monospace; font-size: 20px; font-weight: 700; color: var(--navy-deep); }
+  .cash-price-box .orig { font-size: 12px; color: #999; text-decoration: line-through; margin-left: 6px; font-family: 'JetBrains Mono', monospace; }
+
+  .inst-calc-box { background: var(--cream); border: 1px solid rgba(242,125,38,0.3); padding: 6px 14px; border-radius: 10px; text-align: right; }
+  .inst-calc-box .lbl { font-size: 10px; font-weight: 700; color: var(--orange); text-transform: uppercase; }
+  .inst-calc-box .amt { font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; color: var(--orange); }
+  .inst-calc-box .amt span { font-size: 11px; font-weight: 500; color: var(--navy); }
+
+  /* Right Side: Image & Actions */
+  .h-card-right { width: 300px; background: linear-gradient(135deg, var(--cream), var(--tint)); padding: 18px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; border-left: 1px solid var(--line); position: relative; flex-shrink: 0; }
+  .wish-btn-card { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); transition: 0.2s; z-index: 2; }
+  .wish-btn-card svg { width: 16px; height: 16px; stroke: #666; fill: none; transition: 0.2s; }
+  .wish-btn-card.active svg { stroke: #E53E3E; fill: #E53E3E; }
+
+  .h-card-img-wrap { width: 100%; height: 150px; display: flex; align-items: center; justify-content: center; cursor: pointer; padding: 6px; }
+  .h-card-img-wrap img { max-height: 100%; max-width: 100%; object-contain: contain; transition: 0.3s; }
+  .h-card:hover .h-card-img-wrap img { transform: scale(1.05); }
+
+  .h-card-actions { width: 100%; display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+  .action-row-main { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  .btn-add-cart { background: var(--navy); color: #fff; font-size: 12px; font-weight: 700; padding: 9px; border-radius: 8px; transition: 0.2s; }
+  .btn-add-cart:hover { background: var(--navy-deep); }
+  .btn-buy-inst { background: var(--orange); color: #fff; font-size: 12px; font-weight: 700; padding: 9px; border-radius: 8px; transition: 0.2s; }
+  .btn-buy-inst:hover { background: var(--orange-deep); }
+
+  .action-row-sub { display: grid; grid-template-columns: 1fr auto; gap: 6px; }
+  .btn-quick-view { background: #fff; color: var(--navy); border: 1px solid var(--line); font-size: 11px; font-weight: 700; padding: 7px; border-radius: 8px; }
+  .btn-quick-view:hover { background: var(--tint); }
+  .btn-wa-inquire { background: #25D366; color: #fff; font-size: 11px; font-weight: 700; padding: 7px 12px; border-radius: 8px; display: flex; align-items: center; gap: 4px; }
+  .btn-wa-inquire:hover { background: #1EBE5D; }
+
+  /* Empty state */
+  .empty-state { text-align: center; padding: 60px 20px; background: #fff; border-radius: var(--radius); border: 1px solid var(--line); }
+  .empty-state h3 { font-size: 20px; margin-bottom: 8px; }
+  .empty-state p { font-size: 13px; color: var(--ink-soft); margin-bottom: 20px; }
+
+  /* ---------- INSTALLMENT HIGHLIGHTS (DARK) ---------- */
+  .installment-sec { background: var(--navy-deep); color: #fff; padding: 60px 0; margin-top: 40px; }
+  .installment-sec .sec-head { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 28px; }
+  .installment-sec .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; display: block; }
+  .installment-sec h2 { color: #fff; font-size: 26px; }
+  .igrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .icard { background: #1A2B48; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 18px; position: relative; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease; will-change: transform; }
+  .icard:hover { transform: translateY(-6px); border-color: var(--orange); box-shadow: 0 16px 32px rgba(0,0,0,0.4); }
+  .icard .thumb { height: 130px; border-radius: 10px; background: #0E1C31; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; padding: 8px; }
+  .icard .thumb img { max-height: 100%; max-width: 100%; object-fit: contain; }
+  .icard .brand { font-size: 11px; font-mono; color: #8FA5BC; margin-bottom: 4px; font-weight: 700; }
+  .icard h4 { font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #fff; line-height: 1.3; min-height: 36px; }
+  .icard .price-now { font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--orange); font-weight: 700; }
+  .icard .installment-box { background: rgba(255,255,255,0.06); border-radius: 8px; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; margin: 10px 0 12px; }
+  .icard .installment-box .amt { font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 700; color: #fff; }
+  .icard .installment-box .per { font-size: 10px; color: #9FB1C4; }
+  .icard button { width: 100%; background: var(--orange); color: #fff; padding: 10px; border-radius: 8px; font-weight: 700; font-size: 13px; }
+
+  /* ---------- WHY US & PROCESS ---------- */
+  .why-sec { background: var(--panel); padding: 56px 0; border-top: 1px solid var(--line); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .why-card { text-align: center; padding: 20px; background: var(--cream); border-radius: var(--radius); border: 1px solid var(--line); }
+  .why-icon { width: 50px; height: 50px; border-radius: 12px; background: var(--navy); display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; color: var(--orange); font-size: 20px; }
+  .why-card h4 { font-size: 15px; margin-bottom: 6px; }
+  .why-card p { font-size: 12px; color: var(--ink-soft); }
+
+  .process-sec { background: var(--tint); padding: 56px 0; }
+  .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .step { text-align: center; background: #fff; padding: 22px 16px; border-radius: var(--radius); border: 1px solid var(--line); }
+  .step-num { width: 44px; height: 44px; border-radius: 50%; background: var(--navy); color: #fff; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+  .step:nth-child(4) .step-num { background: var(--orange); }
+  .step h4 { font-size: 14px; margin-bottom: 6px; }
+  .step p { font-size: 12px; color: var(--ink-soft); }
+
+  /* ---------- FOOTER ---------- */
+  footer { background: var(--navy-deep); color: #B9C6D4; padding: 56px 0 20px; border-top: 1px solid rgba(255,255,255,0.08); font-size: 13px; }
+  .foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 32px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  .foot-grid h5 { color: #fff; font-size: 14px; margin-bottom: 16px; font-family: 'Space Grotesk', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+  .foot-grid ul { list-style: none; }
+  .foot-grid li { margin-bottom: 9px; font-size: 13px; }
+  .foot-grid li a:hover { color: var(--orange); }
+  .foot-bottom { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; font-size: 12px; flex-wrap: wrap; gap: 12px; }
+
+  /* ---------- DRAWERS & MODALS ---------- */
+  .drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); backdrop-filter: blur(2px); z-index: 50; display: none; }
+  .drawer-overlay.open { display: block; }
+  .drawer { position: fixed; top: 0; right: 0; bottom: 0; width: 100%; max-width: 420px; background: #fff; z-index: 51; transform: translateX(100%); transition: transform 0.25s ease-in-out; display: flex; flex-direction: column; box-shadow: -5px 0 25px rgba(0,0,0,0.2); }
+  .drawer.open { transform: translateX(0); }
+  .drawer-header { background: var(--navy); color: #fff; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+  .drawer-header h3 { color: #fff; font-size: 17px; }
+  .drawer-body { flex: 1; overflow-y: auto; padding: 20px; }
+  .drawer-footer { padding: 18px 20px; border-top: 1px solid var(--line); background: #fff; }
+
+  .cart-item-row { display: flex; gap: 12px; padding: 12px; background: var(--cream); border: 1px solid var(--line); border-radius: 10px; margin-bottom: 12px; }
+  .cart-item-img { width: 60px; height: 60px; object-fit: contain; background: #fff; border-radius: 8px; padding: 4px; border: 1px solid var(--line); }
+  .cart-item-info { flex: 1; min-width: 0; }
+  .cart-item-title { font-size: 13px; font-weight: 700; color: var(--navy); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* Modal Center */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.65); backdrop-filter: blur(3px); z-index: 60; display: none; align-items: center; justify-content: center; padding: 16px; }
+  .modal-overlay.open { display: flex; }
+  .modal-card { background: #fff; border-radius: var(--radius); width: 100%; max-width: 700px; padding: 28px; position: relative; max-height: 90vh; overflow-y: auto; }
+  .modal-close-btn { position: absolute; top: 16px; right: 16px; background: var(--cream); border-radius: 50%; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; }
+
+  /* Floating WhatsApp */
+  .wa-float { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.25); z-index: 45; transition: 0.2s; }
+  .wa-float:hover { transform: scale(1.1); }
+  .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
+  /* Toast notification */
+  .toast-container { position: fixed; bottom: 24px; left: 24px; z-index: 70; display: flex; flex-direction: column; gap: 8px; pointer-events: none; }
+  .toast { background: var(--navy); color: #fff; padding: 12px 18px; border-radius: 12px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 20px rgba(0,0,0,0.2); animation: toastIn 0.2s ease-out; }
+  @keyframes toastIn { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+  /* Responsive */
+  @media(max-width: 980px) {
+    .hero .wrap { grid-template-columns: 1fr; text-align: center; }
+    .hero p { margin-left: auto; margin-right: auto; }
+    .hero-ctas, .hero-trust { justify-content: center; }
+    .h-card { flex-direction: column; }
+    .h-card-right { width: 100%; border-left: none; border-top: 1px solid var(--line); }
+    .igrid, .why-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+    .foot-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media(max-width: 640px) {
+    .topbar .wrap { justify-content: center; gap: 8px; font-size: 11px; padding: 6px 12px; }
+    .topbar .right { display: none; }
+    .header-row { padding: 10px 14px; gap: 12px; }
+    .logo-mark { width: 36px; height: 36px; }
+    .logo-text { font-size: 18px; }
+    .logo-sub { font-size: 8.5px; }
+    .search-bar { display: none; }
+    .mobile-search-row { display: flex; }
+    .header-icons { gap: 8px; }
+    .icon-btn span { display: none; }
+    .cart-btn-pill span { display: none; }
+    .cart-btn-pill { padding: 8px 10px; border-radius: 10px; }
+    .hero .wrap { padding: 32px 16px; }
+    .hero h1 { font-size: 26px; }
+    .hero-trust { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .filter-engine-bar { padding: 14px; margin: 20px 0 16px; flex-direction: column; align-items: stretch; gap: 12px; }
+    .calculator-controls { justify-content: space-between; width: 100%; }
+    .tenure-chips { width: 100%; justify-content: space-between; }
+    .tenure-chip { flex: 1; text-align: center; padding: 6px 4px; font-size: 11px; }
+    .reset-btn { width: 100%; justify-content: center; padding: 9px; font-size: 12px; }
+    .h-card-left { padding: 16px; }
+    .h-card-title { font-size: 15px; }
+    .h-card-specs { grid-template-columns: 1fr; gap: 4px; padding: 8px 10px; }
+    .h-card-pricing { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .inst-calc-box { width: 100%; text-align: left; display: flex; justify-content: space-between; align-items: center; }
+    .h-card-right { padding: 14px; }
+    .h-card-img-wrap { height: 160px; }
+    .action-row-main { grid-template-columns: 1fr 1fr; }
+    .action-row-sub { grid-template-columns: 1fr 1fr; }
+    .btn-add-cart, .btn-buy-inst, .btn-quick-view, .btn-wa-inquire { padding: 10px; font-size: 12px; }
+    .igrid, .why-grid, .process-grid { grid-template-columns: 1fr; }
+    .foot-grid { grid-template-columns: 1fr; }
+    body { padding-bottom: 72px; }
+    .mobile-bottom-nav { display: flex; }
+    .wa-float { bottom: 80px; right: 16px; width: 50px; height: 50px; }
+    .wa-float svg { width: 24px; height: 24px; }
+  }
+
+  /* Mobile Live Search Row */
+  .mobile-search-row { display: none; padding: 8px 16px 12px; background: var(--panel); border-bottom: 1px solid var(--line); }
+  .mobile-search-box { flex: 1; display: flex; align-items: center; background: var(--tint); border-radius: 24px; padding: 0 12px; border: 1px solid var(--line); }
+  .mobile-search-box svg { width: 16px; height: 16px; stroke: var(--ink-soft); fill: none; margin-right: 6px; flex-shrink: 0; }
+  .mobile-search-box input { flex: 1; border: none; background: transparent; padding: 9px 0; font-size: 13px; outline: none; color: var(--ink); width: 100%; }
+
+  /* Mobile Bottom App Bar */
+  .mobile-bottom-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; height: 60px; background: #fff; border-top: 1px solid var(--line); z-index: 48; justify-content: space-around; align-items: center; box-shadow: 0 -4px 15px rgba(0,0,0,0.06); }
+  .mob-nav-item { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; font-size: 10px; font-weight: 700; color: var(--ink-soft); text-decoration: none; position: relative; background: none; flex: 1; height: 100%; }
+  .mob-nav-item.active { color: var(--orange); }
+  .mob-nav-item svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+  .mob-nav-item .mob-badge { position: absolute; top: 6px; right: 26%; background: var(--orange); color: #fff; font-size: 9px; font-weight: 700; border-radius: 50%; width: 15px; height: 15px; display: flex; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <span class="marquee-badge">0% Markup — Selected Items</span>
+      <a href="tel:021111846300">📞 021-111-TIME-00</a>
+    </div>
+    <div class="right">
+      <a href="#" onclick="openAccountModal(); return false;">🚚 Track Order</a>
+      <a href="#" onclick="openWhatsApp(); return false;" style="color:#25D366; font-weight:700;">💬 WhatsApp Us</a>
+      <a href="#" onclick="alert('Time Electronic Stores:\n1. Main Tariq Road, Karachi\n2. Boat Basin, Clifton, Karachi\n3. Hyderi Market, North Nazimabad'); return false;">📍 Store Locator</a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="site">
+  <div class="header-row wrap">
+    <a href="#" onclick="filterByCategory('All'); return false;" class="logo">
+      <div class="logo-mark"></div>
+      <div>
+        <div class="logo-text">TIME<span>ELECTRONIC</span></div>
+        <span class="logo-sub">Har Cheez Ka Waqt Hai</span>
+      </div>
+    </a>
+
+    <!-- Live Search Bar Desktop -->
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="searchInput" placeholder="AC, LED TV, Fridge, Mobile, Laptop, Haier talaash karein..." oninput="handleSearch(this.value)">
+      <button class="clear-search" id="clearSearchBtn" onclick="clearSearch()">✕</button>
+    </div>
+
+    <!-- Header Icons -->
+    <div class="header-icons">
+      <button class="icon-btn" onclick="openAccountModal()" title="Account & Order Tracking">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <span>Account</span>
+      </button>
+
+      <button class="icon-btn" onclick="openWishlistDrawer()" title="Saved Wishlist">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+          <span class="badge-count" id="wishlistBadge">0</span>
+        </div>
+        <span>Wishlist</span>
+      </button>
+
+      <button class="cart-btn-pill" onclick="openCartDrawer()" title="Shopping Cart">
+        <div style="position:relative;">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+          <span class="badge-count" id="cartBadge" style="top:-8px; right:-10px;">0</span>
+        </div>
+        <span>Cart</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Search Bar (Always Accessible on Phones) -->
+  <div class="mobile-search-row">
+    <div class="mobile-search-box">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="mobileSearchInput" placeholder="AC, Fridge, LED, Mobile, Laptop talaash karein..." oninput="handleSearch(this.value)">
+      <button class="clear-search" id="clearMobileSearchBtn" onclick="clearSearch()" style="display:none; background:transparent; color:#888; padding:4px;">✕</button>
+    </div>
+  </div>
+
+  <!-- Category Nav Strip -->
+  <nav class="mainnav">
+    <div class="wrap" id="topNavCategories">
+      <button class="nav-btn all-btn active" data-category="All" onclick="filterByCategory('All')">All Categories</button>
+      <button class="nav-btn" data-category="Air Conditioners" onclick="filterByCategory('Air Conditioners')">Air Conditioners</button>
+      <button class="nav-btn" data-category="LED / Smart TVs" onclick="filterByCategory('LED / Smart TVs')">LED / Smart TVs</button>
+      <button class="nav-btn" data-category="Refrigerators" onclick="filterByCategory('Refrigerators')">Refrigerators</button>
+      <button class="nav-btn" data-category="Washing Machines" onclick="filterByCategory('Washing Machines')">Washing Machines</button>
+      <button class="nav-btn" data-category="Deep Freezers" onclick="filterByCategory('Deep Freezers')">Deep Freezers</button>
+      <button class="nav-btn" data-category="Mobiles" onclick="filterByCategory('Mobiles')">Mobiles</button>
+      <button class="nav-btn" data-category="Laptops" onclick="filterByCategory('Laptops')">Laptops</button>
+      <button class="nav-btn" data-category="Kitchen Appliances" onclick="filterByCategory('Kitchen Appliances')">Kitchen Appliances</button>
+      <button class="nav-btn" data-category="Room Coolers" onclick="filterByCategory('Room Coolers')">Room Coolers</button>
+      <button class="nav-btn hot-deals" onclick="scrollToDeals()">⚡ Installment Deals</button>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="hero-eyebrow">⚡ Naya Sale — Har Cheez Par Aasan Qist</span>
+      <h1>Aapka <em>waqt</em> qeemti hai,<br>installment <em>aasan</em> honi chahiye.</h1>
+      <p>Time Electronic se AC, LED, Fridge, Mobile aur har home appliance khareedain — bina bojh ke, 0% markup ke sath, poore Karachi mein free delivery aur 24hr fast verification par.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary" onclick="scrollToDeals()">Installment Deals Dekhein</button>
+        <button class="btn-ghost" onclick="scrollToProducts()">Sab Products Browse Karein</button>
+      </div>
+      <div class="hero-trust">
+        <div><strong>50,000+</strong>Khush Customers</div>
+        <div><strong>0%</strong>Markup Options</div>
+        <div><strong>24hr</strong>Fast Verification</div>
+        <div><strong>1 Year</strong>Official Warranty</div>
+      </div>
+    </div>
+    <div>
+      <div class="clock-visual">
+        <div class="dial">
+          <div class="hand h2"></div>
+          <div class="hand h1"></div>
+          <div class="dial-center">
+            <div class="amt" id="heroDialRate">Rs 11,700</div>
+            <div class="lbl" id="heroDialLabel">PER MONTH · 12x PLAN</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORY ICON STRIP -->
+<div class="cat-strip">
+  <div class="wrap" id="iconCategoryStrip">
+    <!-- Populated dynamically via JS -->
+  </div>
+</div>
+
+<!-- MAIN CONTENT WRAPPER -->
+<main class="wrap" id="productsContainer">
+  <!-- Interactive Installment Engine Header & Tenure Switcher -->
+  <div class="filter-engine-bar">
+    <div class="filter-title">
+      <h2 id="activeCategoryHeading">
+        <span id="activeCategoryText">All Electronic Appliances</span>
+        <span id="productCountBadge" style="font-size:12px; font-weight:600; color:var(--ink-soft); background:var(--tint); padding:2px 8px; border-radius:12px; margin-left:6px;">0 Products</span>
+      </h2>
+    </div>
+
+    <div class="calculator-controls">
+      <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+        <span style="font-size:11px; font-weight:700; text-transform:uppercase; color:var(--navy);">Plan:</span>
+        <div class="tenure-chips" id="tenureChips">
+          <button class="tenure-chip" onclick="setTenure(3)">3 Months</button>
+          <button class="tenure-chip" onclick="setTenure(6)">6 Months</button>
+          <button class="tenure-chip active" onclick="setTenure(12)">12 Months</button>
+          <button class="tenure-chip" onclick="setTenure(24)">24 Months</button>
+        </div>
+      </div>
+
+      <button class="reset-btn" id="resetFiltersBtn" onclick="resetFilters()">
+        🔄 View All / Reset Filter
+      </button>
+    </div>
+  </div>
+
+  <!-- DYNAMIC BRAND-GROUPED HORIZONTAL PRODUCTS CONTAINER -->
+  <div id="brandGroupsContainer">
+    <!-- Generated dynamically via JS -->
+  </div>
+</main>
+
+<!-- INSTALLMENT HIGHLIGHTS (DARK DEALS SECTION) -->
+<section class="installment-sec" id="installmentDealsSec">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="eyebrow">Time Electronic Ka Waada</span>
+        <h2>Easy Monthly Installment Par Khareedain</h2>
+      </div>
+      <a href="#" onclick="filterByCategory('All'); scrollToProducts(); return false;" style="color:#fff; font-size:13px; font-weight:700; border-bottom:2px solid var(--orange);">Saare Deals Dekhein →</a>
+    </div>
+    <div class="igrid" id="dealsGrid">
+      <!-- Injected via JS -->
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why-sec">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:32px; text-align:center;">
+      <span style="font-size:12px; font-weight:700; text-transform:uppercase; color:var(--orange); letter-spacing:0.1em; display:block; margin-bottom:4px;">Time Electronic Kyun</span>
+      <h2>Aapka Bharosa, Hamari Zimmedari</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <h4>Aasan Installment</h4>
+        <p>0% markup options ke sath 3 se 24 months tak flexible plans.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🚚</div>
+        <h4>Free Home Delivery</h4>
+        <p>Poore Karachi mein bila kisi extra charge ke ghar tak delivery.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🛡️</div>
+        <h4>100% Genuine Products</h4>
+        <p>Official brand warranty ke sath, koi copy ya used item nahi.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🤝</div>
+        <h4>After-Sales Support</h4>
+        <p>Installation se le kar service tak, hum hamesha saath hain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process-sec">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:36px; text-align:center;">
+      <span style="font-size:12px; font-weight:700; text-transform:uppercase; color:var(--orange); letter-spacing:0.1em; display:block; margin-bottom:4px;">Simple Aur Fast</span>
+      <h2>Installment Par Kaise Khareedein?</h2>
+    </div>
+    <div class="process-grid">
+      <div class="step"><div class="step-num">1</div><h4>Product Select Karein</h4><p>Apni pasand ka item website se choose karein</p></div>
+      <div class="step"><div class="step-num">2</div><h4>Documents Submit</h4><p>CNIC aur basic details submit karein</p></div>
+      <div class="step"><div class="step-num">3</div><h4>24hr Verification</h4><p>Hamari team jaldi aapko confirm kar degi</p></div>
+      <div class="step"><div class="step-num">4</div><h4>Ghar Delivery</h4><p>Product free delivery ke sath ghar pahunch jaye</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="margin-bottom:12px;">
+          <div class="logo-mark"></div>
+          <div>
+            <div class="logo-text" style="color:#fff;">TIME<span>ELECTRONIC</span></div>
+            <span class="logo-sub" style="color:#8FA5BC;">Har Cheez Ka Waqt Hai</span>
+          </div>
+        </div>
+        <p style="font-size:12.5px; line-height:1.6; max-width:280px;">Karachi ki bharosemand electronics aur home appliances shop — asaan installment, genuine products, aur free delivery ke sath.</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#" onclick="filterByCategory('All'); return false;">Home</a></li>
+          <li><a href="#" onclick="scrollToDeals(); return false;">Installment Deals</a></li>
+          <li><a href="#" onclick="openAccountModal(); return false;">Track Application</a></li>
+          <li><a href="#">Installment Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Categories</h5>
+        <ul>
+          <li><a href="#" onclick="filterByCategory('Air Conditioners'); return false;">Air Conditioners</a></li>
+          <li><a href="#" onclick="filterByCategory('Refrigerators'); return false;">Refrigerators</a></li>
+          <li><a href="#" onclick="filterByCategory('LED / Smart TVs'); return false;">LED & Smart TVs</a></li>
+          <li><a href="#" onclick="filterByCategory('Mobiles'); return false;">Mobiles & Tablets</a></li>
+          <li><a href="#" onclick="filterByCategory('Laptops'); return false;">Laptops</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contact Karachi</h5>
+        <ul>
+          <li>📍 Shop #14, Main Tariq Road, Karachi</li>
+          <li>📞 0311-1146720 / 021-111-TIME</li>
+          <li>✉️ info@timeelectronic.pk</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Time Electronic. All Rights Reserved.</span>
+      <div>
+        <span style="background:rgba(255,255,255,0.08); padding:4px 8px; border-radius:4px; font-size:11px; margin-left:6px;">COD</span>
+        <span style="background:rgba(255,255,255,0.08); padding:4px 8px; border-radius:4px; font-size:11px; margin-left:6px;">JazzCash</span>
+        <span style="background:rgba(255,255,255,0.08); padding:4px 8px; border-radius:4px; font-size:11px; margin-left:6px;">EasyPaisa</span>
+        <span style="background:rgba(255,255,255,0.08); padding:4px 8px; border-radius:4px; font-size:11px; margin-left:6px;">Bank Transfer</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://api.whatsapp.com/send?phone=923713575871&text=Salam%20Time%20Electronic!%20I%20want%20to%20inquire%20about%20installment%20deals." target="_blank" rel="noopener noreferrer" onclick="openWhatsApp(); return false;" class="wa-float" title="WhatsApp Us">
+  <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.7 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1a13 13 0 0 1-3.9-2.5 11 11 0 0 1-2.2-3.4c-.3-.7-.3-1.3-.2-1.9.1-.5.7-1.6 1.3-1.7.3-.1.6-.1.8.1l1 2.1c.1.3.1.6-.1.8l-.5.6c-.2.2-.1.5 0 .7.5.9 1.2 1.6 2.1 2.1.2.1.5.2.7 0l.6-.5c.2-.2.5-.2.8-.1l2.1 1c.2.1.3.4.2.6z"/></svg>
+</a>
+
+<!-- MOBILE BOTTOM NAVIGATION BAR -->
+<nav class="mobile-bottom-nav">
+  <button class="mob-nav-item active" id="mobNavHome" onclick="filterByCategory('All'); scrollToProducts();">
+    <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span>Home</span>
+  </button>
+  <button class="mob-nav-item" onclick="scrollToDeals()">
+    <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+    <span>Deals</span>
+  </button>
+  <button class="mob-nav-item" onclick="openWishlistDrawer()">
+    <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+    <span class="mob-badge" id="mobWishlistBadge">0</span>
+    <span>Wishlist</span>
+  </button>
+  <button class="mob-nav-item" onclick="openCartDrawer()">
+    <svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+    <span class="mob-badge" id="mobCartBadge">0</span>
+    <span>Cart</span>
+  </button>
+  <button class="mob-nav-item" style="color:#25D366;" onclick="openWhatsApp()">
+    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    <span>WhatsApp</span>
+  </button>
+</nav>
+
+<!-- CART DRAWER -->
+<div class="drawer-overlay" id="cartOverlay" onclick="closeCartDrawer()"></div>
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-header">
+    <h3>Shopping Cart (<span id="cartDrawerCount">0</span>)</h3>
+    <button onclick="closeCartDrawer()" style="background:none; color:#fff; font-size:18px;">✕</button>
+  </div>
+  <div class="drawer-body" id="cartItemsList">
+    <!-- Cart Items injected via JS -->
+  </div>
+  <div class="drawer-footer" id="cartFooter">
+    <div style="display:flex; justify-content:space-between; margin-bottom:6px; font-size:13px; color:var(--ink-soft);">
+      <span>Total Cash Value:</span>
+      <span class="mono" id="cartTotalCash" style="font-weight:700; color:var(--navy);">Rs 0</span>
+    </div>
+    <div style="display:flex; justify-content:space-between; margin-bottom:14px; font-size:14px; color:var(--orange); font-weight:700;">
+      <span>Monthly Qist (Estimated):</span>
+      <span class="mono" id="cartTotalMonthly">Rs 0/mo</span>
+    </div>
+    <button class="btn-primary" style="width:100%; margin-bottom:8px;" onclick="checkoutOnWhatsApp()">Direct WhatsApp Order</button>
+    <button class="btn-ghost" style="width:100%; background:var(--cream); color:var(--navy); border-color:var(--line);" onclick="clearCart()">Clear Cart</button>
+  </div>
+</div>
+
+<!-- WISHLIST DRAWER -->
+<div class="drawer-overlay" id="wishlistOverlay" onclick="closeWishlistDrawer()"></div>
+<div class="drawer" id="wishlistDrawer">
+  <div class="drawer-header">
+    <h3>My Wishlist (<span id="wishlistDrawerCount">0</span>)</h3>
+    <button onclick="closeWishlistDrawer()" style="background:none; color:#fff; font-size:18px;">✕</button>
+  </div>
+  <div class="drawer-body" id="wishlistItemsList">
+    <!-- Injected via JS -->
+  </div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div class="modal-overlay" id="accountModal" onclick="closeAccountModal(event)">
+  <div class="modal-card" style="max-width:480px;">
+    <button class="modal-close-btn" onclick="closeAccountModalDirect()">✕</button>
+    <div style="text-align:center; margin-bottom:20px;">
+      <div style="width:50px; height:50px; border-radius:50%; background:var(--tint); display:flex; align-items:center; justify-content:center; margin:0 auto 10px; font-size:20px;">👤</div>
+      <h3 style="font-size:20px;">Customer Portal</h3>
+      <p style="font-size:12px; color:var(--ink-soft);">Time Electronic Installment Verification Status</p>
+    </div>
+    <div style="background:var(--navy); color:#fff; padding:16px; border-radius:12px; margin-bottom:18px;">
+      <div style="font-size:11px; text-transform:uppercase; color:var(--orange); font-weight:700;">Approved Credit Limit</div>
+      <div class="mono" style="font-size:26px; font-weight:700; margin:4px 0;">Rs 450,000</div>
+      <div style="font-size:11px; color:#CBD8E5;">Status: Verified Active Customer</div>
+    </div>
+    <div style="background:var(--cream); border:1px solid var(--line); border-radius:10px; padding:14px; margin-bottom:16px; font-size:13px;">
+      <div style="font-weight:700; margin-bottom:4px;">Active Plan: Haier 1.5 Ton DC Inverter AC</div>
+      <div style="color:var(--ink-soft); font-size:12px;">Plan: 12 Months · Monthly: Rs 11,700 · Next Due: 5th Sep</div>
+    </div>
+    <button class="btn-primary" style="width:100%;" onclick="alert('Order tracking status: Delivered on Tariq Road, Karachi.')">Track Active Orders</button>
+  </div>
+</div>
+
+<!-- QUICK VIEW MODAL -->
+<div class="modal-overlay" id="quickViewModal" onclick="closeQuickViewModal(event)">
+  <div class="modal-card" id="quickViewCard">
+    <button class="modal-close-btn" onclick="closeQuickViewModalDirect()">✕</button>
+    <div id="quickViewContent">
+      <!-- Injected dynamically -->
+    </div>
+  </div>
+</div>
+
+<!-- TOAST CONTAINER -->
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- JAVASCRIPT ENGINE -->
+<script>
+// ---------- PRODUCT DATASET ----------
+// Product data now lives in /data/products.json so it can be managed
+// through the Admin Panel (CMS) without editing this file.
+let products = [];
+
+const categoryList = [
+  { name: "All", label: "All Items", icon: "📦" },
+  { name: "Air Conditioners", label: "Air Conditioners", icon: "❄️" },
+  { name: "LED / Smart TVs", label: "Smart TVs", icon: "📺" },
+  { name: "Refrigerators", label: "Refrigerators", icon: "🧊" },
+  { name: "Washing Machines", label: "Washing Mach.", icon: "🧺" },
+  { name: "Deep Freezers", label: "Deep Freezers", icon: "🚪" },
+  { name: "Mobiles", label: "Mobiles", icon: "📱" },
+  { name: "Laptops", label: "Laptops", icon: "💻" },
+  { name: "Room Coolers", label: "Room Coolers", icon: "💨" },
+  { name: "Kitchen Appliances", label: "Kitchen", icon: "🍳" }
+];
+
+// App State
+let currentCategory = "All";
+let searchQuery = "";
+let currentTenure = 12; // 3, 6, 12, 24
+let cart = [];
+let wishlist = new Set(["ac-01", "mob-02"]);
+
+// Format PKR Currency
+function formatPKR(val) {
+  return "Rs " + Math.round(val).toLocaleString("en-PK");
+}
+
+// Generate WhatsApp Inquire Link
+function getWhatsAppUrl(product, tenure = currentTenure) {
+  const phone = "923713575871";
+  if (!product) {
+    return `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent("Salam Time Electronic! I would like to inquire about easy monthly installment deals and catalog in Karachi.")}`;
+  }
+  const monthly = Math.round(product.cashPrice / tenure);
+  const msg = `Salam Time Electronic!\nI am interested in:\n- ${product.title}\n- Brand: ${product.brand}\n- Cash Price: ${formatPKR(product.cashPrice)}\n- Installment Plan: ${tenure} Months (${formatPKR(monthly)}/month)\n\nPlease confirm availability and documentation in Karachi.`;
+  return `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(msg)}`;
+}
+
+// Robust WhatsApp Opener (Desktop Web & Mobile WhatsApp)
+function openWhatsApp(product = null, tenure = currentTenure) {
+  const url = getWhatsAppUrl(product, tenure);
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
+function openWhatsAppById(id) {
+  const p = products.find(prod => prod.id === id);
+  openWhatsApp(p, currentTenure);
+}
+
+// ---------- RENDER FUNCTIONS ----------
+function init() {
+  renderCategoryStrip();
+  renderProducts();
+  renderDeals();
+  updateHeaderBadges();
+}
+
+function renderCategoryStrip() {
+  const strip = document.getElementById("iconCategoryStrip");
+  if (!strip) return;
+  strip.innerHTML = "";
+
+  categoryList.forEach(cat => {
+    const count = cat.name === "All" ? products.length : products.filter(p => p.category === cat.name).length;
+    const btn = document.createElement("button");
+    btn.className = `cat-item ${currentCategory === cat.name ? 'active' : ''}`;
+    btn.onclick = () => filterByCategory(cat.name);
+    btn.innerHTML = `
+      <div class="cat-icon">
+        <span style="font-size:22px;">${cat.icon}</span>
+        <span class="cat-count">${count}</span>
+      </div>
+      <span>${cat.label}</span>
+    `;
+    strip.appendChild(btn);
+  });
+}
+
+function renderProducts() {
+  const container = document.getElementById("brandGroupsContainer");
+  if (!container) return;
+  container.innerHTML = "";
+
+  // Filter products by category and search
+  const filtered = products.filter(p => {
+    if (currentCategory !== "All" && p.category !== currentCategory) return false;
+    if (searchQuery.trim() !== "") {
+      const q = searchQuery.toLowerCase();
+      const matchTitle = p.title.toLowerCase().includes(q);
+      const matchBrand = p.brand.toLowerCase().includes(q);
+      const matchCat = p.category.toLowerCase().includes(q);
+      const matchSpecs = p.specs.some(s => s.toLowerCase().includes(q));
+      return matchTitle || matchBrand || matchCat || matchSpecs;
+    }
+    return true;
+  });
+
+  // Update header text and badge count safely without breaking element references
+  const countBadge = document.getElementById("productCountBadge");
+  const catText = document.getElementById("activeCategoryText");
+  if (countBadge) {
+    countBadge.textContent = `${filtered.length} Products`;
+  }
+  if (catText) {
+    if (searchQuery.trim() !== "") {
+      catText.innerHTML = `Results for "<span style="color:var(--orange);">${searchQuery}</span>"`;
+    } else if (currentCategory === "All") {
+      catText.textContent = "All Electronic Appliances";
+    } else {
+      catText.innerHTML = `<span style="color:var(--orange);">${currentCategory}</span> Collection`;
+    }
+  }
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <div style="font-size:40px; margin-bottom:12px;">🔍</div>
+        <h3>Koi Product Nahi Mila</h3>
+        <p>Aapki search query ya category ke mutabiq koi item available nahi hai.</p>
+        <button class="btn-primary" onclick="resetFilters()">View All Products (Reset)</button>
+      </div>
+    `;
+    return;
+  }
+
+  // Group by Brand
+  const grouped = {};
+  filtered.forEach(p => {
+    if (!grouped[p.brand]) grouped[p.brand] = [];
+    grouped[p.brand].push(p);
+  });
+
+  Object.keys(grouped).sort().forEach(brand => {
+    const brandProducts = grouped[brand];
+    const section = document.createElement("section");
+    section.className = "brand-group-sec";
+
+    section.innerHTML = `
+      <!-- Brand Group Header -->
+      <div class="brand-group-header">
+        <div class="brand-group-title">
+          <div class="brand-group-badge">${brand.charAt(0)}</div>
+          <div>
+            <h3>${brand}</h3>
+            <div class="brand-group-subtitle">Official Warranty & Certified Distribution in Karachi</div>
+          </div>
+        </div>
+        <div style="font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);">${brandProducts.length} Models</div>
+      </div>
+
+      <!-- Horizontal Product Cards List -->
+      <div class="horizontal-products-list">
+        ${brandProducts.map(p => renderHorizontalCard(p)).join("")}
+      </div>
+    `;
+
+    container.appendChild(section);
+  });
+}
+
+function renderHorizontalCard(p) {
+  const monthly = Math.round(p.cashPrice / currentTenure);
+  const isWish = wishlist.has(p.id);
+  const specsList = p.specs.map(s => `<li>${s}</li>`).join("");
+
+  return `
+    <div class="h-card" id="card-${p.id}">
+      <!-- Left Side: Specs, Upfront Price, Installment Breakdown -->
+      <div class="h-card-left">
+        <div>
+          <div class="h-card-meta">
+            <span class="brand-tag">${p.brand}</span>
+            <span class="discount-pill">0% Markup</span>
+            <span class="warranty-txt">Warranty: ${p.warranty}</span>
+          </div>
+          <h3 class="h-card-title">${p.title}</h3>
+          <ul class="h-card-specs">
+            ${specsList}
+          </ul>
+        </div>
+
+        <div class="h-card-pricing">
+          <div class="cash-price-box">
+            <div class="lbl">Full Cash Price</div>
+            <div class="val">${formatPKR(p.cashPrice)} ${p.originalPrice ? `<span class="orig">${formatPKR(p.originalPrice)}</span>` : ''}</div>
+          </div>
+
+          <div class="inst-calc-box">
+            <div class="lbl">Monthly Rate (${currentTenure}m Plan)</div>
+            <div class="amt">${formatPKR(monthly)} <span>/mo</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Image & Action Buttons -->
+      <div class="h-card-right">
+        <button class="wish-btn-card ${isWish ? 'active' : ''}" onclick="toggleWishlist('${p.id}')" title="Wishlist">
+          <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </button>
+
+        <div class="h-card-img-wrap" onclick="openQuickView('${p.id}')">
+          <img src="${p.image}" alt="${p.title}" loading="lazy">
+        </div>
+
+        <div class="h-card-actions">
+          <div class="action-row-main">
+            <button class="btn-add-cart" onclick="addToCart('${p.id}', false)">Add to Cart</button>
+            <button class="btn-buy-inst" onclick="addToCart('${p.id}', true)">Buy Installment</button>
+          </div>
+          <div class="action-row-sub">
+            <button class="btn-quick-view" onclick="openQuickView('${p.id}')">Quick View</button>
+            <a href="${getWhatsAppUrl(p, currentTenure)}" target="_blank" rel="noopener noreferrer" onclick="openWhatsAppById('${p.id}'); return false;" class="btn-wa-inquire" title="WhatsApp Inquire">
+              <span>Inquire</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderDeals() {
+  const grid = document.getElementById("dealsGrid");
+  if (!grid) return;
+  const deals = products.slice(0, 4);
+
+  grid.innerHTML = deals.map(p => {
+    const monthly = Math.round(p.cashPrice / currentTenure);
+    return `
+      <div class="icard">
+        <div>
+          <div class="thumb">
+            <img src="${p.image}" alt="${p.title}">
+          </div>
+          <div class="brand">${p.brand}</div>
+          <h4>${p.title}</h4>
+          <div class="price-now">${formatPKR(p.cashPrice)}</div>
+          <div class="installment-box">
+            <div>
+              <div class="amt">${formatPKR(monthly)}</div>
+              <div class="per">per month × ${currentTenure}</div>
+            </div>
+            <span style="font-size:10px; font-weight:700; color:var(--green); background:rgba(30,142,90,0.15); padding:2px 6px; border-radius:4px;">0% Markup</span>
+          </div>
+        </div>
+        <button onclick="addToCart('${p.id}', true)">Buy on Installment</button>
+      </div>
+    `;
+  }).join("");
+}
+
+// ---------- INTERACTIVE CONTROLS ----------
+function filterByCategory(cat) {
+  currentCategory = cat;
+  searchQuery = "";
+  
+  // Clear search inputs
+  const dInput = document.getElementById("searchInput");
+  if (dInput) dInput.value = "";
+  const mInput = document.getElementById("mobileSearchInput");
+  if (mInput) mInput.value = "";
+  const clearBtn = document.getElementById("clearSearchBtn");
+  if (clearBtn) clearBtn.style.display = "none";
+  const clearMBtn = document.getElementById("clearMobileSearchBtn");
+  if (clearMBtn) clearMBtn.style.display = "none";
+
+  // Update top navigation buttons
+  document.querySelectorAll("#topNavCategories .nav-btn").forEach(btn => {
+    const btnCat = btn.getAttribute("data-category") || btn.textContent.trim();
+    if (btnCat === cat || (cat === "All" && (btnCat === "All Categories" || btn.classList.contains("all-btn")))) {
+      btn.classList.add("active");
+    } else {
+      btn.classList.remove("active");
+    }
+  });
+
+  renderCategoryStrip();
+  renderProducts();
+}
+
+function handleSearch(val) {
+  searchQuery = val;
+  const dInput = document.getElementById("searchInput");
+  const mInput = document.getElementById("mobileSearchInput");
+  if (dInput && dInput.value !== val) dInput.value = val;
+  if (mInput && mInput.value !== val) mInput.value = val;
+
+  const clearBtn = document.getElementById("clearSearchBtn");
+  if (clearBtn) clearBtn.style.display = val ? "block" : "none";
+  const clearMBtn = document.getElementById("clearMobileSearchBtn");
+  if (clearMBtn) clearMBtn.style.display = val ? "block" : "none";
+
+  renderProducts();
+}
+
+function clearSearch() {
+  const dInput = document.getElementById("searchInput");
+  const mInput = document.getElementById("mobileSearchInput");
+  if (dInput) dInput.value = "";
+  if (mInput) mInput.value = "";
+  searchQuery = "";
+  
+  const clearBtn = document.getElementById("clearSearchBtn");
+  if (clearBtn) clearBtn.style.display = "none";
+  const clearMBtn = document.getElementById("clearMobileSearchBtn");
+  if (clearMBtn) clearMBtn.style.display = "none";
+
+  renderProducts();
+}
+
+function setTenure(months) {
+  currentTenure = months;
+
+  // Update chips styling
+  document.querySelectorAll("#tenureChips .tenure-chip").forEach(chip => {
+    if (chip.textContent.includes(months.toString())) {
+      chip.classList.add("active");
+    } else {
+      chip.classList.remove("active");
+    }
+  });
+
+  // Update hero clock rate
+  const sampleMonthly = Math.round(140000 / currentTenure);
+  const heroRateEl = document.getElementById("heroDialRate");
+  const heroLblEl = document.getElementById("heroDialLabel");
+  if (heroRateEl) heroRateEl.textContent = formatPKR(sampleMonthly);
+  if (heroLblEl) heroLblEl.textContent = `PER MONTH · ${currentTenure}x PLAN`;
+
+  // Re-render product cards & deals
+  renderProducts();
+  renderDeals();
+  showToast(`Installment plan updated to ${months} Months rate`);
+}
+
+function resetFilters() {
+  currentCategory = "All";
+  searchQuery = "";
+  const dInput = document.getElementById("searchInput");
+  if (dInput) dInput.value = "";
+  const mInput = document.getElementById("mobileSearchInput");
+  if (mInput) mInput.value = "";
+  const clearBtn = document.getElementById("clearSearchBtn");
+  if (clearBtn) clearBtn.style.display = "none";
+  const clearMBtn = document.getElementById("clearMobileSearchBtn");
+  if (clearMBtn) clearMBtn.style.display = "none";
+
+  document.querySelectorAll("#topNavCategories .nav-btn").forEach(btn => {
+    btn.classList.toggle("active", btn.classList.contains("all-btn"));
+  });
+
+  renderCategoryStrip();
+  renderProducts();
+  scrollToProducts();
+  showToast("Filters reset to All Categories");
+}
+
+function scrollToProducts() {
+  const el = document.getElementById("productsContainer");
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+}
+
+function scrollToDeals() {
+  const el = document.getElementById("installmentDealsSec");
+  if (el) el.scrollIntoView({ behavior: "smooth" });
+}
+
+// ---------- CART & WISHLIST ENGINE ----------
+function addToCart(productId, isInstallment) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+
+  const existing = cart.find(item => item.product.id === productId && item.isInstallment === isInstallment && item.tenure === currentTenure);
+  if (existing) {
+    existing.quantity += 1;
+  } else {
+    cart.push({ product, quantity: 1, tenure: currentTenure, isInstallment });
+  }
+
+  updateHeaderBadges();
+  showToast(`Added "${product.title.slice(0,25)}..." to Cart!`, '🛒');
+}
+
+function toggleWishlist(productId) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+
+  if (wishlist.has(productId)) {
+    wishlist.delete(productId);
+    showToast(`Removed from Wishlist`, '💔');
+  } else {
+    wishlist.add(productId);
+    showToast(`Saved to Wishlist ❤️`, '❤️');
+  }
+
+  updateHeaderBadges();
+  renderProducts();
+}
+
+function updateHeaderBadges() {
+  const totalCartCount = cart.reduce((sum, i) => sum + i.quantity, 0);
+  const cartBadge = document.getElementById("cartBadge");
+  const wishBadge = document.getElementById("wishlistBadge");
+  const mobCartBadge = document.getElementById("mobCartBadge");
+  const mobWishBadge = document.getElementById("mobWishlistBadge");
+
+  if (cartBadge) cartBadge.textContent = totalCartCount;
+  if (wishBadge) wishBadge.textContent = wishlist.size;
+  if (mobCartBadge) mobCartBadge.textContent = totalCartCount;
+  if (mobWishBadge) mobWishBadge.textContent = wishlist.size;
+}
+
+// Cart Drawer open/close
+function openCartDrawer() {
+  renderCartDrawerItems();
+  document.getElementById("cartOverlay").classList.add("open");
+  document.getElementById("cartDrawer").classList.add("open");
+}
+
+function closeCartDrawer() {
+  document.getElementById("cartOverlay").classList.remove("open");
+  document.getElementById("cartDrawer").classList.remove("open");
+}
+
+function renderCartDrawerItems() {
+  const list = document.getElementById("cartItemsList");
+  const totalItems = cart.reduce((sum, i) => sum + i.quantity, 0);
+  document.getElementById("cartDrawerCount").textContent = totalItems;
+
+  if (cart.length === 0) {
+    list.innerHTML = `
+      <div style="text-align:center; padding:40px 10px; color:var(--ink-soft);">
+        <div style="font-size:36px; margin-bottom:10px;">🛒</div>
+        <p>Aapka Cart khali hai.</p>
+      </div>
+    `;
+    document.getElementById("cartTotalCash").textContent = "Rs 0";
+    document.getElementById("cartTotalMonthly").textContent = "Rs 0/mo";
+    return;
+  }
+
+  let totalCash = 0;
+  let totalMonthly = 0;
+
+  list.innerHTML = cart.map((item, idx) => {
+    totalCash += item.product.cashPrice * item.quantity;
+    const monthlyRate = Math.round(item.product.cashPrice / item.tenure);
+    if (item.isInstallment) {
+      totalMonthly += monthlyRate * item.quantity;
+    }
+
+    return `
+      <div class="cart-item-row">
+        <img src="${item.product.image}" class="cart-item-img" alt="${item.product.title}">
+        <div class="cart-item-info">
+          <div class="cart-item-title">${item.product.title}</div>
+          <div style="font-size:11px; color:var(--ink-soft); margin:2px 0;">
+            ${item.isInstallment ? `<span style="color:var(--orange); font-weight:700;">${item.tenure}M Plan · ${formatPKR(monthlyRate)}/mo</span>` : `<span style="font-weight:700;">Cash: ${formatPKR(item.product.cashPrice)}</span>`}
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px;">
+            <div style="display:flex; align-items:center; gap:6px; background:#fff; border:1px solid var(--line); border-radius:6px; padding:2px 6px;">
+              <button onclick="changeCartQty(${idx}, -1)" style="font-weight:700; width:20px; cursor:pointer;">-</button>
+              <span class="mono" style="font-size:12px; font-weight:700;">${item.quantity}</span>
+              <button onclick="changeCartQty(${idx}, 1)" style="font-weight:700; width:20px; cursor:pointer;">+</button>
+            </div>
+            <button onclick="removeCartItem(${idx})" style="color:#E53E3E; font-size:11px; font-weight:700; background:none; cursor:pointer;">Remove</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  document.getElementById("cartTotalCash").textContent = formatPKR(totalCash);
+  document.getElementById("cartTotalMonthly").textContent = formatPKR(totalMonthly) + "/mo";
+}
+
+function changeCartQty(idx, delta) {
+  if (cart[idx]) {
+    cart[idx].quantity += delta;
+    if (cart[idx].quantity <= 0) {
+      cart.splice(idx, 1);
+    }
+  }
+  updateHeaderBadges();
+  renderCartDrawerItems();
+}
+
+function removeCartItem(idx) {
+  cart.splice(idx, 1);
+  updateHeaderBadges();
+  renderCartDrawerItems();
+  showToast("Item removed from cart");
+}
+
+function clearCart() {
+  cart = [];
+  updateHeaderBadges();
+  renderCartDrawerItems();
+  showToast("Cart cleared");
+}
+
+function checkoutOnWhatsApp() {
+  if (cart.length === 0) return;
+  const itemsText = cart.map((i, idx) => `${idx+1}. ${i.product.title} (Qty: ${i.quantity}) - ${i.isInstallment ? `${i.tenure}M Installment @ ${formatPKR(Math.round(i.product.cashPrice/i.tenure))}/mo` : `Full Cash: ${formatPKR(i.product.cashPrice)}`}`).join("\n");
+  const msg = `Salam Time Electronic!\nI want to place an order from website:\n\n${itemsText}\n\nCity: Karachi\nDelivery: Free Home Delivery\nPlease confirm documentation and delivery time!`;
+  const url = `https://api.whatsapp.com/send?phone=923713575871&text=${encodeURIComponent(msg)}`;
+  window.open(url, '_blank', 'noopener,noreferrer');
+}
+
+// Wishlist Drawer open/close
+function openWishlistDrawer() {
+  renderWishlistDrawerItems();
+  document.getElementById("wishlistOverlay").classList.add("open");
+  document.getElementById("wishlistDrawer").classList.add("open");
+}
+
+function closeWishlistDrawer() {
+  document.getElementById("wishlistOverlay").classList.remove("open");
+  document.getElementById("wishlistDrawer").classList.remove("open");
+}
+
+function renderWishlistDrawerItems() {
+  const list = document.getElementById("wishlistItemsList");
+  document.getElementById("wishlistDrawerCount").textContent = wishlist.size;
+
+  if (wishlist.size === 0) {
+    list.innerHTML = `
+      <div style="text-align:center; padding:40px 10px; color:var(--ink-soft);">
+        <div style="font-size:36px; margin-bottom:10px;">❤️</div>
+        <p>Wishlist khali hai.</p>
+      </div>
+    `;
+    return;
+  }
+
+  const wishProds = products.filter(p => wishlist.has(p.id));
+  list.innerHTML = wishProds.map(p => `
+    <div class="cart-item-row">
+      <img src="${p.image}" class="cart-item-img" alt="${p.title}">
+      <div class="cart-item-info">
+        <div class="cart-item-title">${p.title}</div>
+        <div class="mono" style="font-size:12px; font-weight:700; color:var(--navy);">${formatPKR(p.cashPrice)}</div>
+        <div style="display:flex; gap:6px; margin-top:8px;">
+          <button class="btn-buy-inst" style="padding:4px 8px; font-size:11px;" onclick="addToCart('${p.id}', true)">Add to Cart</button>
+          <button onclick="toggleWishlist('${p.id}'); renderWishlistDrawerItems();" style="font-size:11px; color:#E53E3E; background:none; cursor:pointer;">Remove</button>
+        </div>
+      </div>
+    </div>
+  `).join("");
+}
+
+// Account Modal
+function openAccountModal() {
+  document.getElementById("accountModal").classList.add("open");
+}
+function closeAccountModal(e) {
+  if (e.target.id === "accountModal") {
+    document.getElementById("accountModal").classList.remove("open");
+  }
+}
+function closeAccountModalDirect() {
+  document.getElementById("accountModal").classList.remove("open");
+}
+
+// Quick View Modal
+function openQuickView(productId) {
+  const p = products.find(prod => prod.id === productId);
+  if (!p) return;
+  const monthly = Math.round(p.cashPrice / currentTenure);
+
+  const content = document.getElementById("quickViewContent");
+  content.innerHTML = `
+    <div style="display:grid; grid-template-columns:1fr 1.2fr; gap:24px; align-items:start;">
+      <div style="background:var(--cream); padding:20px; border-radius:12px; text-align:center;">
+        <img src="${p.image}" alt="${p.title}" style="max-height:220px; margin:0 auto; object-fit:contain;">
+      </div>
+      <div>
+        <div style="font-size:11px; font-weight:700; color:var(--orange); text-transform:uppercase;">${p.brand} · ${p.category}</div>
+        <h3 style="font-size:18px; line-height:1.3; margin:6px 0 10px;">${p.title}</h3>
+        <ul style="list-style:none; margin-bottom:16px; font-size:12px; color:var(--ink-soft);">
+          ${p.specs.map(s => `<li style="margin-bottom:4px;">✓ ${s}</li>`).join("")}
+        </ul>
+        <div style="background:var(--tint); padding:12px; border-radius:10px; margin-bottom:16px;">
+          <div style="display:flex; justify-content:space-between; margin-bottom:4px;">
+            <span style="font-size:12px; color:var(--ink-soft);">Cash Price:</span>
+            <span class="mono" style="font-weight:700;">${formatPKR(p.cashPrice)}</span>
+          </div>
+          <div style="display:flex; justify-content:space-between; color:var(--orange); font-weight:700;">
+            <span style="font-size:13px;">${currentTenure}M Installment:</span>
+            <span class="mono" style="font-size:16px;">${formatPKR(monthly)}/mo</span>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px;">
+          <button class="btn-add-cart" onclick="addToCart('${p.id}', false); closeQuickViewModalDirect();">Buy Cash</button>
+          <button class="btn-buy-inst" onclick="addToCart('${p.id}', true); closeQuickViewModalDirect();">Buy Installment</button>
+        </div>
+        <button class="btn-wa-inquire" style="width:100%; padding:10px;" onclick="openWhatsAppById('${p.id}')">
+          💬 Inquire on WhatsApp
+        </button>
+      </div>
+    </div>
+  `;
+
+  document.getElementById("quickViewModal").classList.add("open");
+}
+
+function closeQuickViewModal(e) {
+  if (e.target.id === "quickViewModal") {
+    document.getElementById("quickViewModal").classList.remove("open");
+  }
+}
+function closeQuickViewModalDirect() {
+  document.getElementById("quickViewModal").classList.remove("open");
+}
+
+// Toast
+function showToast(message, icon = "✓") {
+  const container = document.getElementById("toastContainer");
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.opacity = "0";
+    toast.style.transform = "translateX(-20px)";
+    toast.style.transition = "0.3s";
+    setTimeout(() => toast.remove(), 300);
+  }, 3000);
+}
+
+// Load product data, then initialize the page
+async function loadProductsAndInit() {
+  try {
+    const res = await fetch("data/products.json");
+    products = await res.json();
+  } catch (err) {
+    console.error("Could not load product data:", err);
+    products = [];
+  }
+  if (products.length) {
+    cart = [{ product: products[0], quantity: 1, tenure: 12, isInstallment: true }];
+  }
+  init();
+}
+
+// Initialize on Load
+document.addEventListener("DOMContentLoaded", loadProductsAndInit);
+</script>
+
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>
