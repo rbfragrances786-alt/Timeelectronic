@@ -1,0 +1,16 @@
+{
+  "id": "lap-02",
+  "title": "HP 15s FHD Core i5 12th Gen (8GB / 512GB SSD)",
+  "category": "Laptops",
+  "brand": "HP",
+  "cashPrice": 148000,
+  "originalPrice": 160000,
+  "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&q=80&w=600",
+  "specs": [
+    "Core i5 1235U 10-Cores",
+    "8GB DDR4 RAM",
+    "512GB Fast NVMe SSD",
+    "15.6 Micro-Edge Anti-Glare"
+  ],
+  "warranty": "1-Year Official Warranty"
+}
