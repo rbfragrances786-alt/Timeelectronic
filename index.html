@@ -371,7 +371,7 @@
 <!-- HEADER -->
 <header class="site">
   <div class="header-row wrap">
-    <a href="#" onclick="filterByCategory('All'); return false;" class="logo">
+    <a href="/" class="logo">
       <div class="logo-mark"></div>
       <div>
         <div class="logo-text">TIME<span>ELECTRONIC</span></div>
@@ -425,16 +425,16 @@
   <!-- Category Nav Strip -->
   <nav class="mainnav">
     <div class="wrap" id="topNavCategories">
-      <button class="nav-btn all-btn active" data-category="All" onclick="filterByCategory('All')">All Categories</button>
-      <button class="nav-btn" data-category="Air Conditioners" onclick="filterByCategory('Air Conditioners')">Air Conditioners</button>
-      <button class="nav-btn" data-category="LED / Smart TVs" onclick="filterByCategory('LED / Smart TVs')">LED / Smart TVs</button>
-      <button class="nav-btn" data-category="Refrigerators" onclick="filterByCategory('Refrigerators')">Refrigerators</button>
-      <button class="nav-btn" data-category="Washing Machines" onclick="filterByCategory('Washing Machines')">Washing Machines</button>
-      <button class="nav-btn" data-category="Deep Freezers" onclick="filterByCategory('Deep Freezers')">Deep Freezers</button>
-      <button class="nav-btn" data-category="Mobiles" onclick="filterByCategory('Mobiles')">Mobiles</button>
-      <button class="nav-btn" data-category="Laptops" onclick="filterByCategory('Laptops')">Laptops</button>
-      <button class="nav-btn" data-category="Kitchen Appliances" onclick="filterByCategory('Kitchen Appliances')">Kitchen Appliances</button>
-      <button class="nav-btn" data-category="Room Coolers" onclick="filterByCategory('Room Coolers')">Room Coolers</button>
+      <button class="nav-btn all-btn active" data-category="All" onclick="goToCategory('All')">All Categories</button>
+      <button class="nav-btn" data-category="Air Conditioners" onclick="goToCategory('Air Conditioners')">Air Conditioners</button>
+      <button class="nav-btn" data-category="LED / Smart TVs" onclick="goToCategory('LED / Smart TVs')">LED / Smart TVs</button>
+      <button class="nav-btn" data-category="Refrigerators" onclick="goToCategory('Refrigerators')">Refrigerators</button>
+      <button class="nav-btn" data-category="Washing Machines" onclick="goToCategory('Washing Machines')">Washing Machines</button>
+      <button class="nav-btn" data-category="Deep Freezers" onclick="goToCategory('Deep Freezers')">Deep Freezers</button>
+      <button class="nav-btn" data-category="Mobiles" onclick="goToCategory('Mobiles')">Mobiles</button>
+      <button class="nav-btn" data-category="Laptops" onclick="goToCategory('Laptops')">Laptops</button>
+      <button class="nav-btn" data-category="Kitchen Appliances" onclick="goToCategory('Kitchen Appliances')">Kitchen Appliances</button>
+      <button class="nav-btn" data-category="Room Coolers" onclick="goToCategory('Room Coolers')">Room Coolers</button>
       <button class="nav-btn hot-deals" onclick="scrollToDeals()">⚡ Installment Deals</button>
     </div>
   </nav>
@@ -522,7 +522,7 @@
         <span class="eyebrow">Time Electronic Ka Waada</span>
         <h2>Easy Monthly Installment Par Khareedain</h2>
       </div>
-      <a href="#" onclick="filterByCategory('All'); scrollToProducts(); return false;" style="color:#fff; font-size:13px; font-weight:700; border-bottom:2px solid var(--orange);">Saare Deals Dekhein →</a>
+      <a href="/" style="color:#fff; font-size:13px; font-weight:700; border-bottom:2px solid var(--orange);">Saare Deals Dekhein →</a>
     </div>
     <div class="igrid" id="dealsGrid">
       <!-- Injected via JS -->
@@ -595,7 +595,7 @@
       <div>
         <h5>Quick Links</h5>
         <ul>
-          <li><a href="#" onclick="filterByCategory('All'); return false;">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="#" onclick="scrollToDeals(); return false;">Installment Deals</a></li>
           <li><a href="#" onclick="openAccountModal(); return false;">Track Application</a></li>
           <li><a href="#">Installment Policy</a></li>
@@ -604,11 +604,11 @@
       <div>
         <h5>Categories</h5>
         <ul>
-          <li><a href="#" onclick="filterByCategory('Air Conditioners'); return false;">Air Conditioners</a></li>
-          <li><a href="#" onclick="filterByCategory('Refrigerators'); return false;">Refrigerators</a></li>
-          <li><a href="#" onclick="filterByCategory('LED / Smart TVs'); return false;">LED & Smart TVs</a></li>
-          <li><a href="#" onclick="filterByCategory('Mobiles'); return false;">Mobiles & Tablets</a></li>
-          <li><a href="#" onclick="filterByCategory('Laptops'); return false;">Laptops</a></li>
+          <li><a href="/air-conditioners/">Air Conditioners</a></li>
+          <li><a href="/refrigerators/">Refrigerators</a></li>
+          <li><a href="/led-smart-tvs/">LED & Smart TVs</a></li>
+          <li><a href="/mobiles/">Mobiles & Tablets</a></li>
+          <li><a href="/laptops/">Laptops</a></li>
         </ul>
       </div>
       <div>
@@ -639,7 +639,7 @@
 
 <!-- MOBILE BOTTOM NAVIGATION BAR -->
 <nav class="mobile-bottom-nav">
-  <button class="mob-nav-item active" id="mobNavHome" onclick="filterByCategory('All'); scrollToProducts();">
+  <button class="mob-nav-item active" id="mobNavHome" onclick="goToCategory('All')">
     <svg viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
     <span>Home</span>
   </button>
@@ -754,6 +754,29 @@ const categoryList = [
   { name: "Kitchen Appliances", label: "Kitchen", icon: "🍳" }
 ];
 
+// Maps each category name to its own dedicated page URL (multi-page site)
+const categorySlugMap = {
+  "Air Conditioners": "air-conditioners",
+  "LED / Smart TVs": "led-smart-tvs",
+  "Refrigerators": "refrigerators",
+  "Washing Machines": "washing-machines",
+  "Deep Freezers": "deep-freezers",
+  "Mobiles": "mobiles",
+  "Laptops": "laptops",
+  "Room Coolers": "room-coolers",
+  "Kitchen Appliances": "kitchen-appliances"
+};
+
+function categoryUrl(catName) {
+  if (!catName || catName === "All") return "/";
+  const slug = categorySlugMap[catName];
+  return slug ? "/" + slug + "/" : "/";
+}
+
+function goToCategory(catName) {
+  window.location.href = categoryUrl(catName);
+}
+
 // App State
 let currentCategory = "All";
 let searchQuery = "";
@@ -805,7 +828,7 @@ function renderCategoryStrip() {
     const count = cat.name === "All" ? products.length : products.filter(p => p.category === cat.name).length;
     const btn = document.createElement("button");
     btn.className = `cat-item ${currentCategory === cat.name ? 'active' : ''}`;
-    btn.onclick = () => filterByCategory(cat.name);
+    btn.onclick = () => goToCategory(cat.name);
     btn.innerHTML = `
       <div class="cat-icon">
         <span style="font-size:22px;">${cat.icon}</span>
@@ -1373,9 +1396,8 @@ function showToast(message, icon = "✓") {
 // Load product data, then initialize the page
 async function loadProductsAndInit() {
   try {
-    const res = await fetch("data/products.json");
-    const data = await res.json();
-    products = data.products || [];
+    const res = await fetch("/data/products.json");
+    products = await res.json();
   } catch (err) {
     console.error("Could not load product data:", err);
     products = [];
@@ -1384,6 +1406,10 @@ async function loadProductsAndInit() {
     cart = [{ product: products[0], quantity: 1, tenure: 12, isInstallment: true }];
   }
   init();
+  // On category-specific pages, auto-filter to that category
+  if (window.__INITIAL_CATEGORY__ && window.__INITIAL_CATEGORY__ !== "All") {
+    filterByCategory(window.__INITIAL_CATEGORY__);
+  }
 }
 
 // Initialize on Load
