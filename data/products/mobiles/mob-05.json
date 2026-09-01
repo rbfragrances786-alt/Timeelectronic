@@ -5,7 +5,7 @@
   "brand": "INFINIX",
   "cashPrice": 89999,
   "originalPrice": 97999,
-  "image": "images/mob-05.jpg",
+  "image": "/images/mob-05.jpg",
   "specs": [
     "8GB RAM + 256GB Storage",
     "108MP OIS Rear Camera",
