@@ -98,21 +98,42 @@
   .nav-btn.hot-deals { margin-left: auto; background: linear-gradient(135deg, var(--orange), var(--orange-deep)); color: #fff; font-weight: 700; border-radius: 20px; padding: 6px 14px; }
 
   /* ---------- HERO ---------- */
-  .hero { background: linear-gradient(135deg, var(--navy) 0%, #13233B 50%, var(--navy-deep) 100%); color: #fff; position: relative; overflow: hidden; }
-  .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; padding: 56px 20px; }
-  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(242,125,38,0.15); border: 1px solid rgba(242,125,38,0.4); color: var(--orange); font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
+  .hero { background: linear-gradient(135deg, #0B5E3C 0%, #0E7A4D 50%, #0B5E3C 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 85% 20%, rgba(255,255,255,0.08), transparent 55%); pointer-events: none; }
+  .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; padding: 56px 20px; position: relative; z-index: 1; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); color: #fff; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
   .hero h1 { font-size: 42px; line-height: 1.15; margin-bottom: 18px; color: #fff; }
-  .hero h1 em { font-style: italic; color: var(--orange); }
-  .hero p { color: #C7D3E0; font-size: 15px; max-width: 480px; margin-bottom: 26px; line-height: 1.6; }
+  .hero h1 em { font-style: italic; color: #FFD700; }
+  .hero p { color: #E4F2EA; font-size: 15px; max-width: 480px; margin-bottom: 26px; line-height: 1.6; }
   .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-primary { background: var(--orange); color: #fff; padding: 13px 26px; border-radius: 12px; font-weight: 700; font-size: 14px; transition: 0.2s; box-shadow: 0 4px 14px rgba(242,125,38,0.3); }
-  .btn-primary:hover { background: var(--orange-deep); }
-  .btn-ghost { background: rgba(255,255,255,0.08); color: #fff; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.25); transition: 0.2s; }
-  .btn-ghost:hover { background: rgba(255,255,255,0.15); border-color: #fff; }
+  .btn-primary { background: #FFD700; color: #0B5E3C; padding: 13px 26px; border-radius: 12px; font-weight: 700; font-size: 14px; transition: 0.2s; box-shadow: 0 4px 14px rgba(255,215,0,0.3); }
+  .btn-primary:hover { background: #FFC700; }
+  .btn-ghost { background: rgba(255,255,255,0.1); color: #fff; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.3); transition: 0.2s; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.18); border-color: #fff; }
 
-  .hero-trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); }
-  .hero-trust div { font-size: 11px; color: #9FB1C4; }
+  .hero-trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.15); }
+  .hero-trust div { font-size: 11px; color: #D4EBDF; }
   .hero-trust strong { display: block; color: #fff; font-size: 18px; font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+
+  /* Hero Image Carousel (14 August Theme) */
+  .hero-carousel { position: relative; width: 100%; max-width: 320px; aspect-ratio: 4/5; margin: 0 auto; border-radius: 18px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.35); border: 3px solid rgba(255,255,255,0.25); }
+  .hero-carousel-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.9s ease; }
+  .hero-carousel-img.active { opacity: 1; }
+  .hero-carousel-dots { position: absolute; bottom: 12px; left: 0; right: 0; display: flex; justify-content: center; gap: 6px; z-index: 2; }
+  .hero-carousel-dots span { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.5); transition: 0.3s; }
+  .hero-carousel-dots span.active { background: #fff; width: 18px; border-radius: 4px; }
+
+  /* Available Brands Strip */
+  .brands-strip { background: #fff; border-bottom: 1px solid var(--line); padding: 14px 0; }
+  .brands-strip .wrap { display: flex; gap: 10px; overflow-x: auto; align-items: center; }
+  .brands-strip-label { font-size: 11px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; flex-shrink: 0; margin-right: 4px; }
+  .brand-chip { flex-shrink: 0; background: var(--cream); border: 1px solid var(--line); color: var(--navy); font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; transition: 0.25s; cursor: pointer; }
+  .brand-chip:hover { background: #0B5E3C; border-color: #0B5E3C; color: #fff; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(11,94,60,0.25); }
+
+  /* Sale Banner Strip */
+  .sale-banner-strip { background: linear-gradient(90deg, #0891B2, #06B6D4, #0891B2); background-size: 200% 100%; animation: saleShimmer 4s ease infinite; padding: 10px 20px; text-align: center; }
+  .sale-banner-strip .wrap { color: #fff; font-size: 13px; font-weight: 800; letter-spacing: 0.02em; }
+  @keyframes saleShimmer { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
   /* Clock Dial Visual */
   .clock-visual { position: relative; width: 280px; height: 280px; margin: 0 auto; }
@@ -159,6 +180,29 @@
   .brand-group-subtitle { font-size: 12px; color: #CBD8E5; }
 
   .horizontal-products-list { display: flex; flex-direction: column; gap: 18px; }
+
+  /* ---------- SMALL GRID PRODUCT CARDS ---------- */
+  .product-grid-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(165px, 1fr)); gap: 14px; }
+  .p-card { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 12px; cursor: pointer; position: relative; transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s ease, border-color 0.25s ease; display: flex; flex-direction: column; }
+  .p-card:hover { transform: translateY(-4px); box-shadow: 0 14px 28px rgba(26,43,72,0.12); border-color: rgba(242,125,38,0.6); }
+  .p-card-wish { position: absolute; top: 10px; right: 10px; width: 28px; height: 28px; border-radius: 50%; background: rgba(255,255,255,0.92); display: flex; align-items: center; justify-content: center; z-index: 2; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+  .p-card-wish svg { width: 15px; height: 15px; stroke: var(--navy); fill: none; stroke-width: 2; }
+  .p-card-wish.active svg { fill: var(--orange); stroke: var(--orange); }
+  .p-card-imgwrap { width: 100%; aspect-ratio: 1/1; background: var(--cream); border-radius: 10px; display: flex; align-items: center; justify-content: center; overflow: hidden; margin-bottom: 10px; }
+  .p-card-imgwrap img { width: 100%; height: 100%; object-fit: contain; padding: 10px; }
+  .p-card-brand { font-size: 10px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 4px; }
+  .p-card-title { font-size: 13px; font-weight: 700; color: var(--navy-deep); line-height: 1.3; margin-bottom: 8px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 34px; }
+  .p-card-price-row { margin-top: auto; }
+  .p-card-cash { font-size: 15px; font-weight: 800; color: var(--navy); font-family: 'Space Grotesk', sans-serif; }
+  .p-card-orig { font-size: 11px; color: var(--ink-soft); text-decoration: line-through; margin-left: 5px; }
+  .p-card-discount { display: inline-block; background: var(--orange); color: #fff; font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 5px; margin-bottom: 4px; }
+  .p-card-monthly { font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+  .p-card-actions { display: flex; gap: 6px; margin-top: 10px; }
+  .p-card-actions button { flex: 1; font-size: 11px; font-weight: 700; padding: 7px 4px; border-radius: 8px; }
+  .p-card-btn-cart { background: var(--tint); color: var(--navy); }
+  .p-card-btn-cart:hover { background: var(--line); }
+  .p-card-btn-inst { background: var(--orange); color: #fff; }
+  .p-card-btn-inst:hover { background: var(--orange-deep); }
 
   /* Horizontal Product Card Wireframe */
   .h-card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); display: flex; flex-direction: row; overflow: hidden; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease; box-shadow: 0 2px 8px rgba(0,0,0,0.03); will-change: transform; }
@@ -220,7 +264,7 @@
   .installment-sec .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; display: block; }
   .installment-sec h2 { color: #fff; font-size: 26px; }
   .igrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .icard { background: #1A2B48; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 18px; position: relative; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease; will-change: transform; }
+  .icard { background: #1A2B48; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 18px; position: relative; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease; will-change: transform; cursor: pointer; }
   .icard:hover { transform: translateY(-6px); border-color: var(--orange); box-shadow: 0 16px 32px rgba(0,0,0,0.4); }
   .icard .thumb { height: 130px; border-radius: 10px; background: #0E1C31; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; padding: 8px; }
   .icard .thumb img { max-height: 100%; max-width: 100%; object-fit: contain; }
@@ -444,34 +488,42 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="hero-eyebrow">⚡ Naya Sale — Har Cheez Par Aasan Qist</span>
-      <h1>Aapka <em>waqt</em> qeemti hai,<br>installment <em>aasan</em> honi chahiye.</h1>
-      <p>Time Electronic se AC, LED, Fridge, Mobile aur har home appliance khareedain — bina bojh ke, 0% markup ke sath, poore Karachi mein free delivery aur 24hr fast verification par.</p>
+      <span class="hero-eyebrow">🇵🇰 Jashn-e-Azadi Sale — Flat 14% Off</span>
+      <h1>Pakistan ki <em>azadi</em> ka jashn,<br>har cheez par <em>14% off!</em></h1>
+      <p>Time Electronic se AC, LED, Fridge, Mobile aur har home appliance khareedain — Independence Day special discount ke sath, poore Karachi mein free delivery aur 24hr fast verification par.</p>
       <div class="hero-ctas">
         <button class="btn-primary" onclick="scrollToDeals()">Installment Deals Dekhein</button>
         <button class="btn-ghost" onclick="scrollToProducts()">Sab Products Browse Karein</button>
       </div>
       <div class="hero-trust">
         <div><strong>50,000+</strong>Khush Customers</div>
-        <div><strong>0%</strong>Markup Options</div>
+        <div><strong>14%</strong>Azadi Sale Off</div>
         <div><strong>24hr</strong>Fast Verification</div>
         <div><strong>1 Year</strong>Official Warranty</div>
       </div>
     </div>
     <div>
-      <div class="clock-visual">
-        <div class="dial">
-          <div class="hand h2"></div>
-          <div class="hand h1"></div>
-          <div class="dial-center">
-            <div class="amt" id="heroDialRate">Rs 11,700</div>
-            <div class="lbl" id="heroDialLabel">PER MONTH · 12x PLAN</div>
-          </div>
-        </div>
+      <div class="hero-carousel" id="heroCarousel">
+        <img src="/images/banner-independence-day.png" alt="Independence Day Sale" class="hero-carousel-img active">
+        <img src="/images/banner-washing-fridge.png" alt="Washing Machines & Fridges Sale" class="hero-carousel-img">
+        <img src="/images/banner-ac-tv-mobile.png" alt="AC, LED TV & Mobiles Sale" class="hero-carousel-img">
+        <div class="hero-carousel-dots" id="heroCarouselDots"></div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- AVAILABLE BRANDS STRIP -->
+<section class="brands-strip">
+  <div class="wrap" id="brandsStripContainer">
+    <!-- Populated dynamically via JS -->
+  </div>
+</section>
+
+<!-- SALE BANNER STRIP -->
+<div class="sale-banner-strip">
+  <div class="wrap">🔥 Jashn-e-Azadi Sale — Flat 14% OFF Har Cheez Par! 🇵🇰</div>
+</div>
 
 <!-- CATEGORY ICON STRIP -->
 <div class="cat-strip">
@@ -814,9 +866,47 @@ function openWhatsAppById(id) {
 // ---------- RENDER FUNCTIONS ----------
 function init() {
   renderCategoryStrip();
+  renderBrandsStrip();
   renderProducts();
   renderDeals();
   updateHeaderBadges();
+  initHeroCarousel();
+}
+
+function initHeroCarousel() {
+  const imgs = document.querySelectorAll(".hero-carousel-img");
+  const dotsContainer = document.getElementById("heroCarouselDots");
+  if (!imgs.length || !dotsContainer || dotsContainer.dataset.initialized) return;
+  dotsContainer.dataset.initialized = "true";
+  dotsContainer.innerHTML = Array.from(imgs).map((_, i) => `<span class="${i === 0 ? 'active' : ''}"></span>`).join("");
+  const dots = dotsContainer.querySelectorAll("span");
+  let current = 0;
+  setInterval(() => {
+    imgs[current].classList.remove("active");
+    dots[current].classList.remove("active");
+    current = (current + 1) % imgs.length;
+    imgs[current].classList.add("active");
+    dots[current].classList.add("active");
+  }, 3500);
+}
+
+function renderBrandsStrip() {
+  const strip = document.getElementById("brandsStripContainer");
+  if (!strip) return;
+  const brands = [...new Set(products.map(p => p.brand))].sort();
+  strip.innerHTML = brands.map(b => `
+    <button class="brand-chip" onclick="scrollToBrand('${b}')">${b}</button>
+  `).join("");
+}
+
+function scrollToBrand(brand) {
+  const slug = "brand-sec-" + brand.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase();
+  const el = document.getElementById(slug);
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+  } else {
+    scrollToProducts();
+  }
 }
 
 function renderCategoryStrip() {
@@ -898,6 +988,7 @@ function renderProducts() {
     const brandProducts = grouped[brand];
     const section = document.createElement("section");
     section.className = "brand-group-sec";
+    section.id = "brand-sec-" + brand.replace(/[^a-zA-Z0-9]+/g, "-").toLowerCase();
 
     section.innerHTML = `
       <!-- Brand Group Header -->
@@ -912,9 +1003,9 @@ function renderProducts() {
         <div style="font-size:12px; font-weight:700; color:rgba(255,255,255,0.85);">${brandProducts.length} Models</div>
       </div>
 
-      <!-- Horizontal Product Cards List -->
-      <div class="horizontal-products-list">
-        ${brandProducts.map(p => renderHorizontalCard(p)).join("")}
+      <!-- Small Grid Product Cards -->
+      <div class="product-grid-list">
+        ${brandProducts.map(p => renderProductCard(p)).join("")}
       </div>
     `;
 
@@ -922,62 +1013,31 @@ function renderProducts() {
   });
 }
 
-function renderHorizontalCard(p) {
+function renderProductCard(p) {
   const monthly = Math.round(p.cashPrice / currentTenure);
   const isWish = wishlist.has(p.id);
-  const specsList = p.specs.map(s => `<li>${s}</li>`).join("");
+  const hasDiscount = p.originalPrice && p.originalPrice > p.cashPrice;
+  const discountPct = hasDiscount ? Math.round((1 - p.cashPrice / p.originalPrice) * 100) : 0;
 
   return `
-    <div class="h-card" id="card-${p.id}">
-      <!-- Left Side: Specs, Upfront Price, Installment Breakdown -->
-      <div class="h-card-left">
-        <div>
-          <div class="h-card-meta">
-            <span class="brand-tag">${p.brand}</span>
-            <span class="discount-pill">0% Markup</span>
-            <span class="warranty-txt">Warranty: ${p.warranty}</span>
-          </div>
-          <h3 class="h-card-title">${p.title}</h3>
-          <ul class="h-card-specs">
-            ${specsList}
-          </ul>
-        </div>
-
-        <div class="h-card-pricing">
-          <div class="cash-price-box">
-            <div class="lbl">Full Cash Price</div>
-            <div class="val">${formatPKR(p.cashPrice)} ${p.originalPrice ? `<span class="orig">${formatPKR(p.originalPrice)}</span>` : ''}</div>
-          </div>
-
-          <div class="inst-calc-box">
-            <div class="lbl">Monthly Rate (${currentTenure}m Plan)</div>
-            <div class="amt">${formatPKR(monthly)} <span>/mo</span></div>
-          </div>
-        </div>
+    <div class="p-card" id="card-${p.id}" onclick="openQuickView('${p.id}')">
+      <button class="p-card-wish ${isWish ? 'active' : ''}" onclick="event.stopPropagation(); toggleWishlist('${p.id}')" title="Wishlist">
+        <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+      </button>
+      <div class="p-card-imgwrap">
+        <img src="${p.image}" alt="${p.title}" loading="lazy">
       </div>
-
-      <!-- Right Side: Image & Action Buttons -->
-      <div class="h-card-right">
-        <button class="wish-btn-card ${isWish ? 'active' : ''}" onclick="toggleWishlist('${p.id}')" title="Wishlist">
-          <svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-        </button>
-
-        <div class="h-card-img-wrap" onclick="openQuickView('${p.id}')">
-          <img src="${p.image}" alt="${p.title}" loading="lazy">
-        </div>
-
-        <div class="h-card-actions">
-          <div class="action-row-main">
-            <button class="btn-add-cart" onclick="addToCart('${p.id}', false)">Add to Cart</button>
-            <button class="btn-buy-inst" onclick="addToCart('${p.id}', true)">Buy Installment</button>
-          </div>
-          <div class="action-row-sub">
-            <button class="btn-quick-view" onclick="openQuickView('${p.id}')">Quick View</button>
-            <a href="${getWhatsAppUrl(p, currentTenure)}" target="_blank" rel="noopener noreferrer" onclick="openWhatsAppById('${p.id}'); return false;" class="btn-wa-inquire" title="WhatsApp Inquire">
-              <span>Inquire</span>
-            </a>
-          </div>
-        </div>
+      <div class="p-card-brand">${p.brand}</div>
+      <div class="p-card-title">${p.title}</div>
+      <div class="p-card-price-row">
+        ${hasDiscount ? `<span class="p-card-discount">${discountPct}% OFF</span><br>` : ''}
+        <span class="p-card-cash">${formatPKR(p.cashPrice)}</span>
+        ${hasDiscount ? `<span class="p-card-orig">${formatPKR(p.originalPrice)}</span>` : ''}
+        <div class="p-card-monthly">${formatPKR(monthly)}/mo (${currentTenure}m)</div>
+      </div>
+      <div class="p-card-actions" onclick="event.stopPropagation();">
+        <button class="p-card-btn-cart" onclick="addToCart('${p.id}', false)">Cart</button>
+        <button class="p-card-btn-inst" onclick="addToCart('${p.id}', true)">Installment</button>
       </div>
     </div>
   `;
@@ -991,7 +1051,7 @@ function renderDeals() {
   grid.innerHTML = deals.map(p => {
     const monthly = Math.round(p.cashPrice / currentTenure);
     return `
-      <div class="icard">
+      <div class="icard" onclick="openQuickView('${p.id}')">
         <div>
           <div class="thumb">
             <img src="${p.image}" alt="${p.title}">
@@ -1007,7 +1067,7 @@ function renderDeals() {
             <span style="font-size:10px; font-weight:700; color:var(--green); background:rgba(30,142,90,0.15); padding:2px 6px; border-radius:4px;">0% Markup</span>
           </div>
         </div>
-        <button onclick="addToCart('${p.id}', true)">Buy on Installment</button>
+        <button onclick="event.stopPropagation(); addToCart('${p.id}', true)">Buy on Installment</button>
       </div>
     `;
   }).join("");
