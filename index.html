@@ -13,17 +13,17 @@
 
 <style>
   :root {
-    --navy: #1A2B48;
-    --navy-deep: #0E1C31;
-    --orange: #F27D26;
-    --orange-deep: #D96816;
-    --cream: #F9F7F2;
+    --navy: #0B5E3C;
+    --navy-deep: #063D28;
+    --orange: #D4A72C;
+    --orange-deep: #B8871A;
+    --cream: #F7FAF8;
     --panel: #FFFFFF;
     --ink: #131B26;
     --ink-soft: #4B5A6B;
-    --line: #E2E8F0;
-    --tint: #EAF0F6;
-    --green: #1E8E5A;
+    --line: #DCEAE1;
+    --tint: #E8F5EC;
+    --green: #0B5E3C;
     --radius: 14px;
   }
 
@@ -98,16 +98,16 @@
   .nav-btn.hot-deals { margin-left: auto; background: linear-gradient(135deg, var(--orange), var(--orange-deep)); color: #fff; font-weight: 700; border-radius: 20px; padding: 6px 14px; }
 
   /* ---------- HERO ---------- */
-  .hero { background: linear-gradient(135deg, #0B5E3C 0%, #0E7A4D 50%, #0B5E3C 100%); color: #fff; position: relative; overflow: hidden; }
+  .hero { background: linear-gradient(135deg, var(--navy) 0%, #0E7A4D 50%, var(--navy-deep) 100%); color: #fff; position: relative; overflow: hidden; }
   .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 85% 20%, rgba(255,255,255,0.08), transparent 55%); pointer-events: none; }
   .hero .wrap { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; padding: 56px 20px; position: relative; z-index: 1; }
   .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.4); color: #fff; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 20px; }
   .hero h1 { font-size: 42px; line-height: 1.15; margin-bottom: 18px; color: #fff; }
-  .hero h1 em { font-style: italic; color: #FFD700; }
+  .hero h1 em { font-style: italic; color: var(--orange); }
   .hero p { color: #E4F2EA; font-size: 15px; max-width: 480px; margin-bottom: 26px; line-height: 1.6; }
   .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-  .btn-primary { background: #FFD700; color: #0B5E3C; padding: 13px 26px; border-radius: 12px; font-weight: 700; font-size: 14px; transition: 0.2s; box-shadow: 0 4px 14px rgba(255,215,0,0.3); }
-  .btn-primary:hover { background: #FFC700; }
+  .btn-primary { background: var(--orange); color: var(--navy-deep); padding: 13px 26px; border-radius: 12px; font-weight: 700; font-size: 14px; transition: 0.2s; box-shadow: 0 4px 14px rgba(212,167,44,0.35); }
+  .btn-primary:hover { background: var(--orange-deep); color: #fff; }
   .btn-ghost { background: rgba(255,255,255,0.1); color: #fff; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.3); transition: 0.2s; }
   .btn-ghost:hover { background: rgba(255,255,255,0.18); border-color: #fff; }
 
@@ -124,11 +124,13 @@
   .hero-carousel-dots span.active { background: #fff; width: 18px; border-radius: 4px; }
 
   /* Available Brands Strip */
-  .brands-strip { background: #fff; border-bottom: 1px solid var(--line); padding: 14px 0; }
-  .brands-strip .wrap { display: flex; gap: 10px; overflow-x: auto; align-items: center; }
+  .brands-strip { background: #fff; border-bottom: 1px solid var(--line); padding: 14px 0; overflow: hidden; }
+  .brands-strip .wrap { display: flex; gap: 10px; align-items: center; width: max-content; animation: brandsMarquee 22s linear infinite; }
+  .brands-strip:hover .wrap { animation-play-state: paused; }
+  @keyframes brandsMarquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
   .brands-strip-label { font-size: 11px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; flex-shrink: 0; margin-right: 4px; }
   .brand-chip { flex-shrink: 0; background: var(--cream); border: 1px solid var(--line); color: var(--navy); font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; transition: 0.25s; cursor: pointer; }
-  .brand-chip:hover { background: #0B5E3C; border-color: #0B5E3C; color: #fff; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(11,94,60,0.25); }
+  .brand-chip:hover { background: var(--navy); border-color: var(--navy); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(11,94,60,0.25); }
 
   /* Sale Banner Strip */
   .sale-banner-strip { background: linear-gradient(90deg, #0891B2, #06B6D4, #0891B2); background-size: 200% 100%; animation: saleShimmer 4s ease infinite; padding: 10px 20px; text-align: center; }
@@ -173,7 +175,7 @@
 
   /* ---------- BRAND GROUPED WIREFRAME SECTION ---------- */
   .brand-group-sec { margin-bottom: 40px; }
-  .brand-group-header { background: linear-gradient(90deg, var(--navy), #243B63); color: #fff; border-radius: var(--radius); padding: 14px 20px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(255,255,255,0.1); }
+  .brand-group-header { background: linear-gradient(90deg, var(--navy), var(--navy-deep)); color: #fff; border-radius: var(--radius); padding: 14px 20px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; border: 1px solid rgba(255,255,255,0.1); }
   .brand-group-title { display: flex; align-items: center; gap: 12px; }
   .brand-group-badge { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,255,255,0.15); display: flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--orange); font-size: 16px; }
   .brand-group-title h3 { font-size: 20px; font-weight: 700; color: #fff; text-transform: uppercase; font-style: italic; }
@@ -264,9 +266,9 @@
   .installment-sec .eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; display: block; }
   .installment-sec h2 { color: #fff; font-size: 26px; }
   .igrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-  .icard { background: #1A2B48; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 18px; position: relative; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease; will-change: transform; cursor: pointer; }
+  .icard { background: #0A3A26; border: 1px solid rgba(255,255,255,0.08); border-radius: var(--radius); padding: 18px; position: relative; display: flex; flex-direction: column; justify-content: space-between; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease; will-change: transform; cursor: pointer; }
   .icard:hover { transform: translateY(-6px); border-color: var(--orange); box-shadow: 0 16px 32px rgba(0,0,0,0.4); }
-  .icard .thumb { height: 130px; border-radius: 10px; background: #0E1C31; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; padding: 8px; }
+  .icard .thumb { height: 130px; border-radius: 10px; background: #063018; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; padding: 8px; }
   .icard .thumb img { max-height: 100%; max-width: 100%; object-fit: contain; }
   .icard .brand { font-size: 11px; font-mono; color: #8FA5BC; margin-bottom: 4px; font-weight: 700; }
   .icard h4 { font-size: 14px; font-weight: 600; margin-bottom: 8px; color: #fff; line-height: 1.3; min-height: 36px; }
@@ -894,9 +896,11 @@ function renderBrandsStrip() {
   const strip = document.getElementById("brandsStripContainer");
   if (!strip) return;
   const brands = [...new Set(products.map(p => p.brand))].sort();
-  strip.innerHTML = brands.map(b => `
+  const chipsHtml = brands.map(b => `
     <button class="brand-chip" onclick="scrollToBrand('${b}')">${b}</button>
   `).join("");
+  // Duplicate the chips so the marquee animation loops seamlessly
+  strip.innerHTML = chipsHtml + chipsHtml;
 }
 
 function scrollToBrand(brand) {
