@@ -1,16 +1,16 @@
 {
-  "brand": "PEL",
-  "cashPrice": 500,
+  "id": "ka-01",
+  "title": "Dawlance 30L Microwave Oven & Grill (DW-395G)",
+  "category": "Kitchen Appliances",
+  "brand": "DAWLANCE",
+  "cashPrice": 36120,
+  "originalPrice": 42000,
+  "image": "https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&q=80&w=600",
   "specs": [
     "30L Capacity",
     "Built-in Pakistani Recipe Menu",
     "Quartz Grill Element",
     "Child Safety Lock"
   ],
-  "originalPrice": 42000,
-  "title": "Dawlance 30L Microwave Oven & Grill (DW-395G)",
-  "id": "ka-01",
-  "image": "https://images.unsplash.com/photo-1585659722983-3a675dabf23d?auto=format&fit=crop&q=80&w=600",
-  "warranty": "2-Year Magnetron Warranty",
-  "category": "Kitchen Appliances"
+  "warranty": "2-Year Magnetron Warranty"
 }
