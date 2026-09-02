@@ -288,6 +288,16 @@
   .toast { background: var(--navy); color: #fff; padding: 12px 18px; border-radius: 12px; font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 10px; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 8px 20px rgba(0,0,0,0.2); animation: toastIn 0.2s ease-out; }
   @keyframes toastIn { from { transform: translateX(-20px); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
 
+  /* Mobile search suggestions */
+  .mobile-search-box { position: relative; }
+  .mobile-search-box + .search-suggestions-dropdown {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 100%;
+    margin-top: 0;
+  }
+
   /* Responsive */
   @media(max-width: 980px) {
     .hero .wrap { grid-template-columns: 1fr; text-align: center; }
@@ -349,6 +359,147 @@
   .mob-nav-item.active { color: var(--orange); }
   .mob-nav-item svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
   .mob-nav-item .mob-badge { position: absolute; top: 6px; right: 26%; background: var(--orange); color: #fff; font-size: 9px; font-weight: 700; border-radius: 50%; width: 15px; height: 15px; display: flex; align-items: center; justify-content: center; }
+
+  /* ---------- SMART SEARCH SUGGESTIONS ---------- */
+  .search-bar { position: relative; }
+  .search-suggestions-dropdown { 
+    position: absolute; 
+    top: 100%; 
+    left: 0; 
+    right: 0; 
+    background: #fff; 
+    border: 1px solid var(--line); 
+    border-top: none; 
+    border-radius: 0 0 12px 12px; 
+    display: none; 
+    z-index: 100; 
+    max-height: 400px; 
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    margin-top: 2px;
+  }
+  .search-suggestions-dropdown.active { display: flex; flex-direction: column; }
+  
+  .suggestion-item { 
+    padding: 12px 16px; 
+    border-bottom: 1px solid var(--line); 
+    cursor: pointer; 
+    transition: 0.15s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .suggestion-item:last-child { border-bottom: none; }
+  .suggestion-item:hover { background: var(--tint); }
+  .suggestion-item.active { 
+    background: var(--navy); 
+    color: #fff;
+  }
+  
+  .suggestion-icon { 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 8px; 
+    background: var(--cream); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 14px; 
+    flex-shrink: 0;
+  }
+  .suggestion-item.active .suggestion-icon { background: rgba(255,255,255,0.2); }
+  
+  .suggestion-content { 
+    flex: 1; 
+    min-width: 0;
+  }
+  .suggestion-title { 
+    font-size: 13px; 
+    font-weight: 600; 
+    color: var(--navy);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .suggestion-item.active .suggestion-title { color: #fff; }
+  
+  .suggestion-meta { 
+    font-size: 11px; 
+    color: var(--ink-soft); 
+    margin-top: 2px;
+  }
+  .suggestion-item.active .suggestion-meta { color: rgba(255,255,255,0.8); }
+  
+  .suggestion-price { 
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--orange);
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .suggestion-item.active .suggestion-price { color: #fff; }
+  
+  .search-suggestion-section { 
+    padding: 8px 16px; 
+    background: var(--cream); 
+    font-size: 10px; 
+    font-weight: 700; 
+    text-transform: uppercase; 
+    color: var(--ink-soft); 
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .search-no-results {
+    text-align: center;
+    padding: 24px 16px;
+    color: var(--ink-soft);
+    font-size: 13px;
+  }
+  
+  .search-no-results-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  
+  .recent-search-item {
+    background: linear-gradient(135deg, rgba(242,125,38,0.05), rgba(26,43,72,0.05));
+  }
+  .recent-search-item:hover {
+    background: linear-gradient(135deg, rgba(242,125,38,0.15), rgba(26,43,72,0.1));
+  }
+  
+  .clear-recent-btn {
+    padding: 10px 16px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink-soft);
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    cursor: pointer;
+    transition: 0.15s;
+  }
+  .clear-recent-btn:hover {
+    background: rgba(242,125,38,0.1);
+    color: var(--orange);
+  }
+  
+  /* Fuzzy match highlight */
+  .suggestion-title.fuzzy-match {
+    color: var(--orange);
+    font-weight: 600;
+  }
+</style>
+    .search-suggestions-dropdown {
+      max-height: 300px;
+      border-radius: 0 0 8px 8px;
+    }
+    .suggestion-item {
+      padding: 10px 12px;
+    }
+  }
 </style>
 </head>
 <body>
@@ -382,8 +533,9 @@
     <!-- Live Search Bar Desktop -->
     <div class="search-bar">
       <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" id="searchInput" placeholder="AC, LED TV, Fridge, Mobile, Laptop, Haier talaash karein..." oninput="handleSearch(this.value)">
+      <input type="text" id="searchInput" placeholder="AC, LED TV, Fridge, Mobile, Laptop, Haier talaash karein..." oninput="handleSearch(this.value)" onkeydown="handleSearchKeydown(event)">
       <button class="clear-search" id="clearSearchBtn" onclick="clearSearch()">✕</button>
+      <div class="search-suggestions-dropdown" id="searchSuggestionsDropdown"></div>
     </div>
 
     <!-- Header Icons -->
@@ -417,8 +569,9 @@
   <div class="mobile-search-row">
     <div class="mobile-search-box">
       <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" id="mobileSearchInput" placeholder="AC, Fridge, LED, Mobile, Laptop talaash karein..." oninput="handleSearch(this.value)">
+      <input type="text" id="mobileSearchInput" placeholder="AC, Fridge, LED, Mobile, Laptop talaash karein..." oninput="handleSearch(this.value)" onkeydown="handleSearchKeydown(event)">
       <button class="clear-search" id="clearMobileSearchBtn" onclick="clearSearch()" style="display:none; background:transparent; color:#888; padding:4px;">✕</button>
+      <div class="search-suggestions-dropdown" id="mobileSuggestionsDropdown"></div>
     </div>
   </div>
 
@@ -1013,6 +1166,415 @@ function renderDeals() {
   }).join("");
 }
 
+// ---------- SMART SEARCH & AUTO-SUGGESTIONS ENGINE ----------
+let currentSuggestionIndex = -1;
+let currentSuggestions = [];
+const RECENT_SEARCHES_KEY = 'timeelectronic_recent_searches';
+const MAX_RECENT_SEARCHES = 5;
+
+// Levenshtein distance for fuzzy matching (spell correction)
+function levenshteinDistance(a, b) {
+  const aLen = a.length;
+  const bLen = b.length;
+  const matrix = Array(aLen + 1).fill(null).map(() => Array(bLen + 1));
+  
+  for (let i = 0; i <= aLen; i++) matrix[i][0] = i;
+  for (let j = 0; j <= bLen; j++) matrix[0][j] = j;
+  
+  for (let i = 1; i <= aLen; i++) {
+    for (let j = 1; j <= bLen; j++) {
+      const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + cost
+      );
+    }
+  }
+  return matrix[aLen][bLen];
+}
+
+// Fuzzy match scorer
+function fuzzyMatchScore(text, query) {
+  const text_lower = text.toLowerCase();
+  const query_lower = query.toLowerCase();
+  
+  // Exact match
+  if (text_lower === query_lower) return 100;
+  
+  // Contains match (highest priority after exact)
+  if (text_lower.includes(query_lower)) {
+    return 90 - (text_lower.indexOf(query_lower) * 0.1);
+  }
+  
+  // Fuzzy match with Levenshtein
+  const distance = levenshteinDistance(text_lower, query_lower);
+  const maxLen = Math.max(text_lower.length, query_lower.length);
+  const similarity = Math.max(0, 100 - (distance * 10));
+  
+  // Only consider matches with at least 60% similarity
+  return similarity >= 60 ? similarity : 0;
+}
+
+function getSuggestions(query) {
+  // Make sure products are loaded
+  if (!products || products.length === 0) return [];
+  
+  if (!query || query.trim().length < 1) {
+    return getRecentSearches();
+  }
+  
+  const q = query.toLowerCase().trim();
+  const suggestions = [];
+  
+  // Search products and score them based on match quality
+  products.forEach(p => {
+    let score = 0;
+    let matchType = null;
+    
+    // Title match (highest priority)
+    if (p.title && p.title.toLowerCase().includes(q)) {
+      score = 100;
+      matchType = 'title';
+    }
+    // Brand match
+    else if (p.brand && p.brand.toLowerCase().includes(q)) {
+      score = 80;
+      matchType = 'brand';
+    }
+    // Category match
+    else if (p.category && p.category.toLowerCase().includes(q)) {
+      score = 60;
+      matchType = 'category';
+    }
+    // Specs match
+    else if (p.specs && p.specs.some(s => s.toLowerCase().includes(q))) {
+      score = 50;
+      matchType = 'specs';
+    }
+    
+    if (score > 0) {
+      suggestions.push({
+        ...p,
+        matchType,
+        score
+      });
+    }
+  });
+  
+  // Sort by score (highest first), then by brand name
+  suggestions.sort((a, b) => {
+    if (b.score !== a.score) return b.score - a.score;
+    return (a.brand || '').localeCompare(b.brand || '');
+  });
+  
+  // Return top 8 suggestions
+  return suggestions.slice(0, 8);
+}
+
+// Recent searches management
+function addToRecentSearches(query) {
+  if (!query || query.trim().length < 2) return;
+  
+  let recent = JSON.parse(localStorage.getItem(RECENT_SEARCHES_KEY) || '[]');
+  const cleanQuery = query.trim().toLowerCase();
+  
+  // Remove if already exists
+  recent = recent.filter(s => s.toLowerCase() !== cleanQuery);
+  
+  // Add to front
+  recent.unshift(query.trim());
+  
+  // Keep only last MAX_RECENT_SEARCHES
+  recent = recent.slice(0, MAX_RECENT_SEARCHES);
+  
+  localStorage.setItem(RECENT_SEARCHES_KEY, JSON.stringify(recent));
+}
+
+function getRecentSearches() {
+  try {
+    const recent = JSON.parse(localStorage.getItem(RECENT_SEARCHES_KEY) || '[]');
+    return recent.map(search => ({
+      id: 'recent_' + Math.random(),
+      title: search,
+      brand: '⏱️ Recent',
+      category: 'Search History',
+      cashPrice: 0,
+      image: '',
+      specs: [],
+      warranty: '',
+      matchType: 'recent',
+      isRecent: true
+    }));
+  } catch (e) {
+    return [];
+  }
+}
+
+function clearRecentSearches() {
+  localStorage.removeItem(RECENT_SEARCHES_KEY);
+  closeSuggestions();
+}
+
+function renderSuggestions(suggestions) {
+  const dropdown = document.getElementById("searchSuggestionsDropdown");
+  const mobileDropdown = document.getElementById("mobileSuggestionsDropdown");
+  
+  currentSuggestions = suggestions;
+  currentSuggestionIndex = -1;
+  
+  if (!suggestions || suggestions.length === 0) {
+    const html = `
+      <div class="search-no-results">
+        <div class="search-no-results-icon">🔍</div>
+        <div>Koi product nahi mila</div>
+      </div>
+    `;
+    if (dropdown) dropdown.innerHTML = html;
+    if (mobileDropdown) mobileDropdown.innerHTML = html;
+    return;
+  }
+  
+  // Separate recent searches from products
+  const recentSearches = suggestions.filter(s => s.isRecent);
+  const productSuggestions = suggestions.filter(s => !s.isRecent);
+  
+  // Group suggestions by match type for better organization
+  const grouped = {};
+  productSuggestions.forEach(s => {
+    const type = s.matchType || 'other';
+    if (!grouped[type]) grouped[type] = [];
+    grouped[type].push(s);
+  });
+  
+  const typeLabels = {
+    title: '✅ Exact Match',
+    brand: '🏷️ Brand',
+    category: '📂 Category',
+    specs: '⚙️ Features',
+    other: 'Other'
+  };
+  
+  let html = '';
+  let idx = 0;
+  
+  // Recent searches first
+  if (recentSearches.length > 0 && productSuggestions.length === 0) {
+    html += `<div class="search-suggestion-section">⏱️ Recent Searches</div>`;
+    recentSearches.forEach((p) => {
+      html += renderRecentSearchItem(p, idx++);
+    });
+    
+    if (recentSearches.length > 0) {
+      html += `<div class="clear-recent-btn" onclick="clearRecentSearches()">🗑️ Clear Recent</div>`;
+    }
+  }
+  
+  // Title matches first
+  if (grouped.title) {
+    html += `<div class="search-suggestion-section">${typeLabels.title}</div>`;
+    grouped.title.forEach((p) => {
+      html += renderSuggestionItem(p, idx++);
+    });
+  }
+  
+  // Brand matches
+  if (grouped.brand) {
+    if (html && !html.includes('Exact Match')) html += `<div class="search-suggestion-section">${typeLabels.brand}</div>`;
+    grouped.brand.forEach((p) => {
+      html += renderSuggestionItem(p, idx++);
+    });
+  }
+  
+  // Category and others
+  if (grouped.category) {
+    if (html && !html.includes('Brand')) html += `<div class="search-suggestion-section">${typeLabels.category}</div>`;
+    grouped.category.forEach((p) => {
+      html += renderSuggestionItem(p, idx++);
+    });
+  }
+  
+  const dropdownHtml = html || `
+    <div class="search-no-results">
+      <div class="search-no-results-icon">🔍</div>
+      <div>Koi product nahi mila</div>
+    </div>
+  `;
+  
+  if (dropdown) dropdown.innerHTML = dropdownHtml;
+  if (mobileDropdown) mobileDropdown.innerHTML = dropdownHtml;
+}
+
+function renderSuggestionItem(product, index) {
+  const icon = getCategoryIcon(product.category);
+  return `
+    <div class="suggestion-item" data-index="${index}" onclick="selectSuggestion('${product.id}')">
+      <div class="suggestion-icon">${icon}</div>
+      <div class="suggestion-content">
+        <div class="suggestion-title">${product.title}</div>
+        <div class="suggestion-meta">${product.brand} · ${product.category}</div>
+      </div>
+      <div class="suggestion-price">${formatPKR(product.cashPrice)}</div>
+    </div>
+  `;
+}
+
+function renderRecentSearchItem(item, index) {
+  return `
+    <div class="suggestion-item recent-search-item" data-index="${index}" onclick="selectRecentSearch('${item.title}')">
+      <div class="suggestion-icon">🕐</div>
+      <div class="suggestion-content">
+        <div class="suggestion-title">${item.title}</div>
+        <div class="suggestion-meta">Click to search again</div>
+      </div>
+      <div style="cursor: pointer; padding: 4px 8px;" onclick="event.stopPropagation(); removeRecentSearch('${item.title}')">✕</div>
+    </div>
+  `;
+}
+
+function getCategoryIcon(category) {
+  const iconMap = {
+    "Air Conditioners": "❄️",
+    "LED / Smart TVs": "📺",
+    "Refrigerators": "🧊",
+    "Washing Machines": "🧺",
+    "Deep Freezers": "🚪",
+    "Mobiles": "📱",
+    "Laptops": "💻",
+    "Kitchen Appliances": "🍳",
+    "Room Coolers": "💨"
+  };
+  return iconMap[category] || "📦";
+}
+
+function selectSuggestion(productId) {
+  const product = products.find(p => p.id === productId);
+  if (!product) return;
+  
+  // Set search query to product title
+  searchQuery = product.title;
+  document.getElementById("searchInput").value = product.title;
+  document.getElementById("mobileSearchInput").value = product.title;
+  
+  // Add to recent searches
+  addToRecentSearches(product.title);
+  
+  // Hide suggestions
+  closeSuggestions();
+  
+  // Render products
+  renderProducts();
+  
+  // Scroll to products
+  setTimeout(() => scrollToProducts(), 100);
+}
+
+function selectRecentSearch(query) {
+  searchQuery = query;
+  document.getElementById("searchInput").value = query;
+  document.getElementById("mobileSearchInput").value = query;
+  
+  closeSuggestions();
+  renderProducts();
+  setTimeout(() => scrollToProducts(), 100);
+}
+
+function removeRecentSearch(query) {
+  let recent = JSON.parse(localStorage.getItem(RECENT_SEARCHES_KEY) || '[]');
+  recent = recent.filter(s => s !== query);
+  localStorage.setItem(RECENT_SEARCHES_KEY, JSON.stringify(recent));
+  
+  // Re-render suggestions
+  const input = document.getElementById("searchInput");
+  if (input && input.value.trim().length >= 1) {
+    handleSearch(input.value);
+  }
+}
+
+function handleSearchKeydown(event) {
+  const key = event.key;
+  
+  if (key === "ArrowDown") {
+    event.preventDefault();
+    currentSuggestionIndex = Math.min(currentSuggestionIndex + 1, currentSuggestions.length - 1);
+    updateActiveSuggestion();
+  } else if (key === "ArrowUp") {
+    event.preventDefault();
+    currentSuggestionIndex = Math.max(currentSuggestionIndex - 1, -1);
+    updateActiveSuggestion();
+  } else if (key === "Enter") {
+    event.preventDefault();
+    if (currentSuggestionIndex >= 0 && currentSuggestions[currentSuggestionIndex]) {
+      selectSuggestion(currentSuggestions[currentSuggestionIndex].id);
+    } else {
+      // Search with current query
+      renderProducts();
+    }
+  } else if (key === "Escape") {
+    closeSuggestions();
+  }
+}
+
+function updateActiveSuggestion() {
+  document.querySelectorAll(".suggestion-item").forEach((item, idx) => {
+    if (idx === currentSuggestionIndex) {
+      item.classList.add("active");
+      item.scrollIntoView({ block: "nearest" });
+    } else {
+      item.classList.remove("active");
+    }
+  });
+}
+
+function closeSuggestions() {
+  const dropdown = document.getElementById("searchSuggestionsDropdown");
+  const mobileDropdown = document.getElementById("mobileSuggestionsDropdown");
+  if (dropdown) dropdown.classList.remove("active");
+  if (mobileDropdown) mobileDropdown.classList.remove("active");
+  currentSuggestions = [];
+  currentSuggestionIndex = -1;
+}
+
+// Close suggestions when clicking outside search bar
+document.addEventListener("click", function(event) {
+  const searchBar = document.querySelector(".search-bar");
+  const mobileSearchBox = document.querySelector(".mobile-search-box");
+  
+  if (!searchBar?.contains(event.target) && !mobileSearchBox?.contains(event.target)) {
+    closeSuggestions();
+  }
+});
+
+// Show recent searches on focus when search is empty
+document.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.getElementById("searchInput");
+  const mobileSearchInput = document.getElementById("mobileSearchInput");
+  
+  if (searchInput) {
+    searchInput.addEventListener("focus", function() {
+      if (this.value.trim().length === 0) {
+        const recentSuggestions = getRecentSearches();
+        if (recentSuggestions.length > 0) {
+          renderSuggestions(recentSuggestions);
+          document.getElementById("searchSuggestionsDropdown").classList.add("active");
+        }
+      }
+    });
+  }
+  
+  if (mobileSearchInput) {
+    mobileSearchInput.addEventListener("focus", function() {
+      if (this.value.trim().length === 0) {
+        const recentSuggestions = getRecentSearches();
+        if (recentSuggestions.length > 0) {
+          renderSuggestions(recentSuggestions);
+          document.getElementById("mobileSuggestionsDropdown").classList.add("active");
+        }
+      }
+    });
+  }
+});
+
 // ---------- INTERACTIVE CONTROLS ----------
 function filterByCategory(cat) {
   currentCategory = cat;
@@ -1027,6 +1589,9 @@ function filterByCategory(cat) {
   if (clearBtn) clearBtn.style.display = "none";
   const clearMBtn = document.getElementById("clearMobileSearchBtn");
   if (clearMBtn) clearMBtn.style.display = "none";
+
+  // Close suggestions
+  closeSuggestions();
 
   // Update top navigation buttons
   document.querySelectorAll("#topNavCategories .nav-btn").forEach(btn => {
@@ -1054,7 +1619,42 @@ function handleSearch(val) {
   const clearMBtn = document.getElementById("clearMobileSearchBtn");
   if (clearMBtn) clearMBtn.style.display = val ? "block" : "none";
 
-  renderProducts();
+  // Show or hide suggestions
+  const dropdown = document.getElementById("searchSuggestionsDropdown");
+  const mobileDropdown = document.getElementById("mobileSuggestionsDropdown");
+  
+  if (val && val.trim().length >= 1) {
+    // Check if products are loaded
+    if (!products || products.length === 0) {
+      const html = '<div class="suggestion-item" style="padding: 15px; text-align: center; color: #999;">Loading products...</div>';
+      if (dropdown) dropdown.innerHTML = html;
+      if (mobileDropdown) mobileDropdown.innerHTML = html;
+      if (dropdown) dropdown.classList.add("active");
+      if (mobileDropdown) mobileDropdown.classList.add("active");
+      return;
+    }
+    
+    // Search mode - show product suggestions
+    const suggestions = getSuggestions(val);
+    renderSuggestions(suggestions);
+    if (dropdown) dropdown.classList.add("active");
+    if (mobileDropdown) mobileDropdown.classList.add("active");
+    renderProducts();
+  } else {
+    // Empty search - show recent searches
+    const recentSuggestions = getRecentSearches();
+    if (recentSuggestions.length > 0) {
+      renderSuggestions(recentSuggestions);
+      if (dropdown) dropdown.classList.add("active");
+      if (mobileDropdown) mobileDropdown.classList.add("active");
+    } else {
+      closeSuggestions();
+    }
+    // Show all products when search is empty
+    if (searchQuery.trim() === "") {
+      renderProducts();
+    }
+  }
 }
 
 function clearSearch() {
@@ -1069,6 +1669,7 @@ function clearSearch() {
   const clearMBtn = document.getElementById("clearMobileSearchBtn");
   if (clearMBtn) clearMBtn.style.display = "none";
 
+  closeSuggestions();
   renderProducts();
 }
 
