@@ -13,17 +13,17 @@
 
 <style>
   :root {
-    --navy: #0B5E3C;
-    --navy-deep: #063D28;
-    --orange: #D4A72C;
-    --orange-deep: #B8871A;
-    --cream: #F7FAF8;
+    --navy: #1A2B48;
+    --navy-deep: #0E1C31;
+    --orange: #F27D26;
+    --orange-deep: #D96816;
+    --cream: #F9F7F2;
     --panel: #FFFFFF;
     --ink: #131B26;
     --ink-soft: #4B5A6B;
-    --line: #DCEAE1;
-    --tint: #E8F5EC;
-    --green: #0B5E3C;
+    --line: #E2E8F0;
+    --tint: #EAF0F6;
+    --green: #1E8E5A;
     --radius: 14px;
   }
 
@@ -131,11 +131,6 @@
   .brands-strip-label { font-size: 11px; font-weight: 700; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.04em; flex-shrink: 0; margin-right: 4px; }
   .brand-chip { flex-shrink: 0; background: var(--cream); border: 1px solid var(--line); color: var(--navy); font-size: 12px; font-weight: 700; padding: 7px 16px; border-radius: 20px; transition: 0.25s; cursor: pointer; }
   .brand-chip:hover { background: var(--navy); border-color: var(--navy); color: #fff; transform: translateY(-2px); box-shadow: 0 6px 14px rgba(11,94,60,0.25); }
-
-  /* Sale Banner Strip */
-  .sale-banner-strip { background: linear-gradient(90deg, #0891B2, #06B6D4, #0891B2); background-size: 200% 100%; animation: saleShimmer 4s ease infinite; padding: 10px 20px; text-align: center; }
-  .sale-banner-strip .wrap { color: #fff; font-size: 13px; font-weight: 800; letter-spacing: 0.02em; }
-  @keyframes saleShimmer { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
 
   /* Clock Dial Visual */
   .clock-visual { position: relative; width: 280px; height: 280px; margin: 0 auto; }
@@ -643,26 +638,30 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="hero-eyebrow">🇵🇰 Jashn-e-Azadi Sale — Flat 14% Off</span>
-      <h1>Pakistan ki <em>azadi</em> ka jashn,<br>har cheez par <em>14% off!</em></h1>
-      <p>Time Electronic se AC, LED, Fridge, Mobile aur har home appliance khareedain — Independence Day special discount ke sath, poore Karachi mein free delivery aur 24hr fast verification par.</p>
+      <span class="hero-eyebrow">⚡ Naya Sale — Har Cheez Par Aasan Qist</span>
+      <h1>Aapka <em>waqt</em> qeemti hai,<br>installment <em>aasan</em> honi chahiye.</h1>
+      <p>Time Electronic se AC, LED, Fridge, Mobile aur har home appliance khareedain — bina bojh ke, 0% markup ke sath, poore Karachi mein free delivery aur 24hr fast verification par.</p>
       <div class="hero-ctas">
         <button class="btn-primary" onclick="scrollToDeals()">Installment Deals Dekhein</button>
         <button class="btn-ghost" onclick="scrollToProducts()">Sab Products Browse Karein</button>
       </div>
       <div class="hero-trust">
         <div><strong>50,000+</strong>Khush Customers</div>
-        <div><strong>14%</strong>Azadi Sale Off</div>
+        <div><strong>0%</strong>Markup Options</div>
         <div><strong>24hr</strong>Fast Verification</div>
         <div><strong>1 Year</strong>Official Warranty</div>
       </div>
     </div>
     <div>
-      <div class="hero-carousel" id="heroCarousel">
-        <img src="/images/banner-independence-day.png" alt="Independence Day Sale" class="hero-carousel-img active">
-        <img src="/images/banner-washing-fridge.png" alt="Washing Machines & Fridges Sale" class="hero-carousel-img">
-        <img src="/images/banner-ac-tv-mobile.png" alt="AC, LED TV & Mobiles Sale" class="hero-carousel-img">
-        <div class="hero-carousel-dots" id="heroCarouselDots"></div>
+      <div class="clock-visual">
+        <div class="dial">
+          <div class="hand h2"></div>
+          <div class="hand h1"></div>
+          <div class="dial-center">
+            <div class="amt" id="heroDialRate">Rs 11,700</div>
+            <div class="lbl" id="heroDialLabel">PER MONTH · 12x PLAN</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -674,11 +673,6 @@
     <!-- Populated dynamically via JS -->
   </div>
 </section>
-
-<!-- SALE BANNER STRIP -->
-<div class="sale-banner-strip">
-  <div class="wrap">🔥 Jashn-e-Azadi Sale — Flat 14% OFF Har Cheez Par! 🇵🇰</div>
-</div>
 
 <!-- CATEGORY ICON STRIP -->
 <div class="cat-strip">
